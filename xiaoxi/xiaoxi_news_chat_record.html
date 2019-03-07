@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="xiaoxi_news_chat.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            <div class="_mid">
+            	冰购群(<span class="num">25</span>)
+            </div>
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="main_xiaoxi_chat_record">
+          <ul class="member">
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    	<div class="pic"><img src="../image/xiaoxi/head.jpg"></div>
+                        <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+        			<div class="add">
+                    	<img src="../image/xiaoxi/icon_add.png">
+                    </div>
+          </ul>
+          <ul class="sel">
+          		<li>消息免打扰<div class="switch"><div class="in"></div></div></li>
+          		<li>置顶聊天<div class="switch"><div class="in"></div></div></li>
+          		<li>清空聊天记录</li>
+          		<li><a href="xiaoxi_news_chat_record_rep.html">举报群</a></li>
+          </ul>
+          <div class="exit">
+          		退出群聊
+          </div>
+	</div>
+    <div class="xiaoxi_chat_record_overlay">
+    	<div class="record">
+            <div class="title">确定清空当前聊天记录吗？</div>
+            <ul>
+                <li>取消</li>
+                <li>确定</li>
+            </ul>
+        </div>
+    	<div class="exit">
+            <div class="title">确定要退出群聊吗?</div>
+            <ul>
+                <li>取消</li>
+                <li>确定</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+    <script type="text/javascript">
+		var aLi =$('.main_xiaoxi_chat_record .sel li .switch');
+		// var onOff = true;	// 只能控制一组！
+		for( var i=0; i<aLi.length; i++ ){
+			
+			aLi[i].onOff = true;
+			
+			aLi[i].onclick = function (){
+				if ( this.onOff ) {
+					$(this).css('background','#5ce637').children('.in').addClass('current')
+					this.onOff = false;
+				} else {
+					$(this).css('background','#dadada').children('.in').removeClass('current')
+					this.onOff = true;
+				}
+			};
+		}
+
+	$('.main_xiaoxi_chat_record .exit').click(function(e) {
+        $('.xiaoxi_chat_record_overlay').show(0).children('.exit').show(0)
+    });
+	$('.main_xiaoxi_chat_record .sel li:eq(2)').click(function(e) {
+        $('.xiaoxi_chat_record_overlay').show(0).children('.record').show(0)
+    });
+	$('.xiaoxi_chat_record_overlay .record ul li,.xiaoxi_chat_record_overlay .exit ul li:eq(0)').click(function(e) {
+        $('.xiaoxi_chat_record_overlay').hide(0).children().hide(0)
+    });
+	$('.xiaoxi_chat_record_overlay .exit ul li:eq(1)').click(function(e) {
+		window.location.href='xiaoxi_news.html'
+    });	
+	</script>
+
+
+
+
+
+
+

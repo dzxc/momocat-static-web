@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    	<a href="person.html"><div class="_left"><img src="../image/person/Arrow_left_icon.png"></div></a>
+    	我的钱包
+    </header>
+    <div class="person_wallet">
+    	<div class="balance">
+        	<div class="icon">
+            	<img src="../image/person/iconfont-icon01.png">
+            </div>
+        	<h1>账户余额：</h1>
+            <h2>￥
+            	<span>500</span>
+            </h2>
+        </div>
+    	<div class="cash">
+        	<ul>
+            	<a href="person_wallet_recharge.html"><li><div class="icon"><img src="../image/person/icon-chongzhi.png"></div>充值</li></a>
+            	<a href="person_wallet_with.html"><li><div class="icon"><img src="../image/person/iocn-tixian.png"></div>提现</li></a>
+            	<a href="person_wallet_card.html"><li><div class="icon"><img src="../image/person/icon-chongzhi.png"></div>银行卡</li></a>
+            	<a href="person_wallet_account.html"><li><div class="icon"><img src="../image/person/iocn-tixian.png"></div>账单</li></a>
+            </ul>
+        </div>
+    	<div class="type">
+        	<ul>
+            	<a href="person_wallet_bd.html"><li>
+                	<div class="icon"><img src="../image/person/icon-jifen.png"></div>
+                    <div class="wrap">
+                    	冰豆<h1>50</h1>
+                    </div>
+                </li></a>
+            	<a href="person_wallet_coupon.html"><li>
+                	<div class="icon"><img src="../image/person/iconfont-youhuiquan.png"></div>
+                    <div class="wrap">
+                    	优惠券<h1>50</h1>
+                    </div>
+                </li></a>
+            	<li>
+                	<div class="icon"><img src="../image/person/icon-hongbao.png"></div>
+                    <a href="person_wallet_lucky.html"><div class="wrap">
+                    	红包<h2>暂未开放</h2>
+                    </div></a>
+                </li>
+            	<li></li>
+            </ul>
+        </div>
+    </div>
+     <!--弹窗--->
+   <div class="tan">  
+    <div class="bg"></div>
+    <div class="Popup">
+        <p>您还未添加银行卡</p>
+        <ul>
+            <li><a href="#">取消</a></li>
+            <li style="border-right:none;"><a href="#">添加</a></li>
+        </ul>
+    </div>
+   </div> 
+</body>
+</html>
+    <script src="../js/script.js"></script>
+    <script type="text/javascript">
+       /*添加银行卡弹窗*/
+ $(function($){
+	    $(".balance").click(function(){
+	      $(".tan").show();
+	});
+	   $(".Popup ul li").click(function(){
+	     $(".tan").hide();
+	});	  
+});
+
+    </script>
+
+
+

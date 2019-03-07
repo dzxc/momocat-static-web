@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../style/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../style/flickerplate.css" type="text/css">
+    <link rel="stylesheet" href="../style/xiao_style_r.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    	<a href="person.html"><div class="_left"><img src="../image/person/Arrow_left_icon.png"></div></a>
+    	编辑个人资料
+    </header>
+	<div class="person_edit">
+    				<div class="head">
+                    	<div class="pic"><img src="../image/person/01.jpg"></div>
+                    </div>
+                    <ul>
+						<a href="person_edit_name.html"><li>
+                        	<span>备注</span>霍建华
+                        </li></a>
+						<li>
+                        	<span>性别</span><input value="男" readonly>
+                        </li>
+						<a href="person_edit_career.html"><li>
+                        	<span>职业</span><input value="运营" readonly>
+                        </li></a>
+						<li>
+                        	<span>年龄</span>24
+                        </li>
+						<li>
+                        	<span>地区</span>浙江杭州
+                        </li>
+						<a href="person_edit_tall.html"><li>
+                        	<span>身高</span>175
+                        </li></a>
+						<a href="person_edit_wei.html"><li>
+                        	<span>体重</span>66
+                        </li></a>
+						<li>
+                        	<span>婚恋</span><!--<input value="热恋中" readonly>-->已婚
+                        </li>
+                        
+						<a href="person_edit_sign.html"><li>
+                        	<span>个人说明</span>哒哒哒
+                        </li></a>
+						<li>
+                        	<span>冰购号</span>12345678
+                        </li>
+                    </ul>    
+    </div>
+    <!--按钮-->
+    <form>
+        <input type="button" value="删除好友"  class="btn_a"/>
+    </form>
+    <div class="person_edit_overlay">
+    	<div class="exc_bg">
+        	<ul>
+            	<li>从手机相册选择</li>
+            	<li>拍照</li>
+            	<li>取消</li>
+            </ul>
+        </div>
+    	<div class="born_date">
+            <div class="wrap">
+                <ul class="n">
+                    <li>1990年</li>
+                    <li>1991年</li>
+                    <li>1992年</li>
+                    <li>1993年</li>
+                    <li>1994年</li>
+                </ul>
+                <ul class="y">
+                    <li>9月</li>
+                    <li>10月</li>
+                    <li>11月</li>
+                    <li>12月</li>
+                    <li>1月</li>
+                </ul>
+                <ul class="r">
+                    <li>20日</li>
+                    <li>21日</li>
+                    <li>22日</li>
+                    <li>23日</li>
+                    <li>24日</li>
+                </ul>
+            </div>
+            <div class="sel">
+            	<div class='cal'>取消</div>
+            	<div class="com">完成</div>
+            </div>
+        </div>
+        
+    	<div class="place">
+            <div class="wrap">
+                <ul class="a">
+                    <li>山东</li>
+                    <li>安徽</li>
+                    <li>浙江</li>
+                    <li>福建</li>
+                    <li>湖北</li>
+                </ul>
+                <ul class="s">
+                    <li>舟山</li>
+                    <li>宁波</li>
+                    <li>杭州</li>
+                    <li>温州</li>
+                    <li>嘉兴</li>
+                </ul>
+            </div>
+            <div class="sel">
+            	<div class='cal'>取消</div>
+            	<div class="com">完成</div>
+            </div>
+        </div>
+    	<div class="mar">
+            <div class="wrap">
+                <ul class="a">
+                    <li>保密</li>
+                    <li>单身</li>
+                    <li>热恋中</li>
+                    <li>已婚</li>
+                    <li>离异</li>
+                </ul>
+            </div>
+            <div class="sel">
+            	<div class='cal'>取消</div>
+            </div>
+        </div>
+    	<div class="exc_tx">
+        	<ul>
+            	<li>从手机相册选择</li>
+            	<li>拍照</li>
+            	<li>取消</li>
+            </ul>
+        </div>
+    	<div class="exc_sex">
+        	<ul>
+            	<li>男</li>
+            	<li>女</li>
+            	<li>取消</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+function Click(Btn,Main,Cal){
+		$(Btn).click(function(e) {
+            $('.person_edit_overlay').show(0).children(Main).show(0)
+        });
+		$(Cal).click(function(e) {
+            $('.person_edit_overlay').hide(0).children(Main).hide(0)
+        });
+	}
+
+	Click('.person_edit li:eq(1)','.exc_sex','.person_edit_overlay .exc_sex ul li:eq(2)')
+	Click('.person_edit li:eq(3)','.place','.person_edit_overlay .place .sel .cal')
+	Click('.person_edit li:eq(4)','.born_date','.person_edit_overlay .born_date .sel .cal')
+	Click('.person_edit li:eq(7)','.mar','.person_edit_overlay .mar .sel .cal')
+	Click('.person_edit .head .pic','.exc_bg','.person_edit_overlay .exc_bg ul li:eq(2)')
+	Click('.person_edit .head','.exc_tx','.person_edit_overlay .exc_tx ul li:eq(2)')
+
+
+</script>
+
+
+
+

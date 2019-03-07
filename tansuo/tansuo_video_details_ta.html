@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/tansuo_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code --> 
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#f2f2f2">
+        <header>
+                <div class="_left"><a href="tansuo_video_details.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                卡通衬衫
+                <div class="_right"><img src="../image/tansuo/iconfont-collect.png"></div>
+        </header>
+    <!--  ----------------------------热门视频购----------------------------->
+	<!-- 主要内容 -->
+		<ul class="main_video_details_ta">
+        	<li class="banner">
+                 <img src="../image/tansuo/ban.jpg" width="100%">
+            </li>
+        	<li><textarea class="describe" readonly>素木原创大码女装翻领条纹泡泡袖卡通衬衫中长款外穿上衣衬衣U101卡通衬衫中长款外穿上衣衬衣素木原创大码女装翻领条纹泡泡袖卡通衬衫中长款外穿上衣衬衣U101卡通衬衫中长款外穿上衣衬衣素木原创大码女装翻领条纹泡泡袖卡通衬衫中长款外穿上衣衬衣U101卡通衬衫中长款外穿上衣衬衣</textarea>
+            </li>
+            <li class="more">更多详情↓</li>
+    	</ul>
+       	<div class="g_short clear">
+                    <ul>
+                       <li>
+       							 <!-- 半透明遮罩 -->
+                        	<div class="f-overlay">
+                                <h3><img src="../image/remen/iconfont-liulang.png"><span>4567</span></h3>
+                            </div>
+                        	<div class="main"><img src="../image/tansuo/jpg_1.jpg"></div>
+                            <h4>新款韩国牛仔</h4>
+                            <h1>冬天的风景</h1>
+                            <h2><img src="../image/tansuo/iconfont-collect_small.png"><span>56</span></h2>
+                        </li>
+                        
+                       <li>
+       							 <!-- 半透明遮罩 -->
+                        	<div class="f-overlay">
+                                <h3><img src="../image/remen/iconfont-liulang.png"><span>4567</span></h3>
+                            </div>
+                        	<div class="main"><img src="../image/tansuo/jpg_2.jpg"></div>
+                            <h4>新款韩国牛仔</h4>
+                            <h1>冬天的风景</h1>
+                            <h2><img src="../image/tansuo/iconfont-collect_small.png"><span>56</span></h2>
+                        </li>
+                       <li>
+       							 <!-- 半透明遮罩 -->
+                        	<div class="f-overlay">
+                                <h3><img src="../image/remen/iconfont-liulang.png"><span>4567</span></h3>
+                            </div>
+                        	<div class="main"><img src="../image/tansuo/jpg_1.jpg"></div>
+                            <h4>新款韩国牛仔</h4>
+                            <h1>冬天的风景</h1>
+                            <h2><img src="../image/tansuo/iconfont-collect_small.png"><span>56</span></h2>
+                        </li>
+                       <li>
+       							 <!-- 半透明遮罩 -->
+                        	<div class="f-overlay">
+                                <h3><img src="../image/remen/iconfont-liulang.png"><span>4567</span></h3>
+                            </div>
+                        	<div class="main"><img src="../image/tansuo/jpg_2.jpg"></div>
+                            <h4>新款韩国牛仔</h4>
+                            <h1>冬天的风景</h1>
+                            <h2><img src="../image/tansuo/iconfont-collect_small.png"><span>56</span></h2>
+                        </li>
+                    </ul>    
+    	</div>
+ 
+            
+    <script src="../js/script.js"></script>
+</body>
+</html>
+    <script>
+		var num=0;
+		var like=0;
+		var sum;
+    	$('.main_video_details_ta .more').click(function(e) {
+			if(num==0){
+				$(this).html('收起↑')
+				$('.main_video_details_ta .describe').css('height',5.8+'rem')
+				num=1;
+			}else{
+				$(this).html('更多详情↓')
+				num=0;
+				$('.main_video_details_ta .describe').css('height',1.9+'rem')
+			}
+        });
+		$('.g_short ul li h2').click(function(e) {
+			if(like==0){
+				$(this).children('img').attr('src','../image/tansuo/iconfont-collect_small_r.png')
+				sum=parseInt($(this).children('span').text())+1;
+				$(this).children('span').text(sum)
+				like=1;
+			}else{
+				$(this).children('img').attr('src','../image/tansuo/iconfont-collect_small.png')
+				sum=parseInt($(this).children('span').text())-1;
+				$(this).children('span').text(sum)
+				like=0;
+			}
+        });
+    
+    </script>

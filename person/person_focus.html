@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+        	<!--搜索框-->
+            <div class="person_focus_search">
+                <input id="person_focus_input" placeholder="请输入您想要的商品">
+                <img src="../image/tansuo/Elipse-3.png">
+                <div class="person_focus_search_cancel">取消</div>
+            </div>
+
+<!-----------------------------------我的关注------------------------------------->
+        <header>
+                <div class="_left"><a href="person.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                我的关注
+                <div class="_right" id="person_focus_search"><img src="../image/person/iconfont-chaxun.png"></div>
+        </header>
+        <div class="person_focus_overlay"></div>
+        <div class="main_person_focus">
+            <ul>
+            	<div class="lately">A</div>
+                <li>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                </li>   
+            <!---->
+                <li>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                </li>  
+            	<div class="lately">B</div>
+                <li>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                </li>   
+                <li>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                </li> 
+            	<div class="lately">C</div>
+                <li>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                </li>   
+            
+            
+            </ul>  
+        </div>
+    
+    
+    
+    
+</body>
+
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+			var searchInput= $('#person_focus_input');
+			$('#person_focus_search').click(function(e) {
+				$('header').hide(0)
+				$('.person_focus_search').show(0)
+				$('.person_focus_overlay').show(0)
+			});
+			$('.person_focus_search_cancel').click(function(e) {
+				$('header').show(0)
+				$('.person_focus_search').hide(0)
+				$('.person_focus_overlay').hide(0)
+			});
+	
+			searchInput.focus(function(){
+				searchInput.attr('placeholder','');
+			}).blur(function(){
+				searchInput.attr('placeholder','搜索我的关注');
+			});
+		
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

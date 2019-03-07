@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/tansuo_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <!-- JavaScript Code --> 
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+	<script src="../js/swiper.min.js"></script>
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+    <style type="text/css">
+    .swiper-container {
+        height: 100%;
+		height:7rem;
+		padding:0.5rem 0 0 0.6rem;
+		background:#fff;
+		border-bottom:1px solid #ebebeb;
+    }
+    .swiper-slide {
+        text-align: center;
+        background: #fff;
+		overflow:hidden;
+		height:6.5rem;
+        /* Center slide text vertically */
+		display:-moz-box; 
+		display:-webkit-box; 
+		display:box; 
+		-moz-box-orient:vertical; 
+		-webkit-box-orient:vertical; 
+		-o-box-orient:vertical; 
+		box-orient:vertical;		
+		display: -ms-flexbox;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	.swiper-slide img{
+		width:100%;		
+	}
+    </style>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#f2f2f2">
+        <header class="main_video_details_header">
+                <div class="_left"><a href="person_shop.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                店铺详情
+                <div class="_right"><img src="../image/tansuo/iconfont-collect.png"></div>
+        </header>
+    <!--  ----------------------------热门视频购----------------------------->
+	<!-- 主要内容 -->
+		<div class="main_video_details">
+        			<div class="main_video_details_banner">
+                       <div class="f-overlay"></div>
+                    	<img src="../image/tansuo/video.jpg" width="100%">
+                    </div>
+    	</div>
+        <ul class="main_video_details_ul">
+        	<li class="main_video_details_shop">
+                     <div class="head"><img src="../image/tansuo/shinubi.jpg"></div>阿华 <span>我的店铺</span>
+            </li>
+            
+        	<li class="main_video_details_describe">
+                     <textarea class="describe" readonly>素木原创大码女装翻领条纹泡泡袖卡通衬衫中长款外穿上衣衬衣U101卡通衬衫中长款外穿上衣衬衣</textarea>
+					<div class="share" id="main_video_details_describe_share"><img src="../image/tansuo/iconfont-zhuanfab.png">分享</div>
+            </li>
+            
+        	<li class="main_video_details_price">
+                     <div class="fl">价格&nbsp;<span class="price">168元</span></div>
+                     <div class="fr">库存&nbsp;<span class="num">9999件</span></div>
+            </li>
+            <li class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../image/tansuo/renwu.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/tansuo/renwu.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/tansuo/renwu.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/tansuo/renwu.jpg"></div>
+                </div>
+            </li>
+        	<li class="main_video_details_news">
+                     <span>买家评论</span>
+            </li>
+        	<li class="main_video_details_comment">
+                     <div class="describe"><div class="head"><img src="../image/tansuo/head.png"></div><span class="name">流年哗哗哗</span><span class="time">3分钟前</span></div>
+					 <div class="share"><img src="../image/tansuo/iconfont-dianzan.png">50</div>
+                     <div class="content">质量不错，手感也很好的，颜色大方，值得拥有的一件衣服。</div>
+            </li>
+        	<li class="main_video_details_comment">
+                     <div class="describe"><div class="head"><img src="../image/tansuo/head.png"></div><span class="name">流年哗哗哗</span><span class="time">3分钟前</span></div>
+					 <div class="share"><img src="../image/tansuo/iconfont-dianzan.png">50</div>
+                     <div class="content">质量不错，手感也很好的，颜色大方，值得拥有的一件衣服。</div>
+            </li>
+        	<li class="main_video_details_comment">
+                     <div class="describe"><div class="head"><img src="../image/tansuo/head.png"></div><span class="name">流年哗哗哗</span><span class="time">3分钟前</span></div>
+					 <div class="share"><img src="../image/tansuo/iconfont-dianzan.png">50</div>
+                     <div class="content">质量不错，手感也很好的，颜色大方，值得拥有的一件衣服。</div>
+            </li>
+		</ul>
+     <div class="main_video_details_foot">
+     		<ul>
+    			<li class="shop"><img src="../image/tansuo/iconfont-shopping.png"></li>        
+    			<li class="comment"><img src="../image/tansuo/iconfont-pinglun.png"></li>        
+    			<li class="buy">立即购买</li>   
+    			<li class="addshop">加入购物车</li>        
+            </ul>
+     </div>  
+     <div class="main_haipin_f-overlay">
+    	<div class="haipin_wrap">
+            <div class="tip">分享到</div>
+            <div class="main clear">
+                <ul>
+                    <li><img src="../image/tansuo/icon_wx.png">微信好友</li>
+                    <li><img src="../image/tansuo/icon_py.png">朋友圈</li>
+                    <li><img src="../image/tansuo/icon_qq.png">QQ好友</li>
+                    <li><img src="../image/tansuo/icon_kj.png">QQ空间</li>
+                    <li><img src="../image/tansuo/icon_wb.png">新浪微博</li>
+                </ul>
+            </div>
+            <div class="cancel">取消</div>
+        </div>	
+    </div>
+     <div class="main_video_details_addbuy">
+    	<div class="wrap">
+            <div class="tip">
+            	<span>数量选择</span>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>1</h1>
+            		<div class="num_r">+</div>
+                </div>
+            </div>
+            <ul>
+                    <li>备注：</li>
+                    <li><textarea placeholder="填写你所需要的尺码规格"></textarea></li>
+            </ul>
+            <div class="cancel">
+            	<div class="enter fl">确定</div>   
+    			<div class="cal fr">取消</div>        
+			</div>
+        </div>	
+    </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        slidesPerView: 5,
+        spaceBetween: 50,
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            640: {
+                slidesPerView: 2.5,
+                spaceBetween: 8
+            },
+            320: {
+                slidesPerView: 2.5,
+                spaceBetween: 5
+            }
+        }
+    });
+		$('.main_video_details_foot .buy,.main_video_details_foot .addshop').click(function(e) {
+		  	$('.main_video_details_addbuy').show(0)
+    	});
+		$('.main_video_details_addbuy .cancel').click(function(e) {
+		  	$('.main_video_details_addbuy').hide(0)
+    	});
+		
+		/*数量选择*/
+		var sum;
+		$('.main_video_details_addbuy .tip .num_l').click(function(e) {
+			if( sum<1){
+				sum==0
+			}
+			else{
+				sum=parseInt($('.main_video_details_addbuy .tip .num_m h1').text())-1;
+				$('.main_video_details_addbuy .tip .num_m h1').text(sum)
+			}
+        });				
+		$('.main_video_details_addbuy .tip .num_r').click(function(e) {
+				sum=parseInt($('.main_video_details_addbuy .tip .num_m h1').text())+1;
+				$('.main_video_details_addbuy .tip .num_m h1').text(sum)
+        });				
+    </script>

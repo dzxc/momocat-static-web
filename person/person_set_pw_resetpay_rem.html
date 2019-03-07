@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#fff">
+	<header>
+    		<a href="person_set_pw_resetpay.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            身份验证
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="person_set_pw_resetpay_rem">
+    	  <div class="tip">输入原支付密码以完成身份验证</div>
+          <div class="ipt">
+		           <input type="password" name="sn1" maxlength="1" id="sn1"/>
+		           <input type="password" name="sn2" maxlength="1" id="sn2"/>
+		           <input type="password" name="sn3" maxlength="1" id="sn3"/>
+		           <input type="password" name="sn4" maxlength="1" id="sn4"/>
+		           <input type="password" name="sn5" maxlength="1" id="sn5"/>
+		           <input type="password" name="sn6" maxlength="1" id="sn6"/>
+          </div>
+          <a href="person_set_pw_resetpay_remcom.html"><div class="next">下一步</div></a>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+    //输入密码
+    function device_verify() {
+        var sn = $("#sn1").val() + $("#sn2").val() + $("#sn3").val() + $("#sn4").val() + $("#sn5").val() + $("#sn6").val();
+        $(".loading_series").show(); //loading图标
+        $("#device_msg").hide(); //错误密码提示
+		
+        $.ajax({
+            cache: false,
+            type: "GET",
+            url: purl,
+            data: pparm,
+            dataType: "jsonp",
+            jsonp: "callback",
+
+            success: function(obj) {
+				
+				
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $("#sn1").focus();
+
+        //自动跳到下一个输入框  
+        $(".person_set_pw_resetpay_rem .ipt input").each(function() {
+            $(this).keyup(function(e) {
+                e = window.event || e;
+                var k = e.keyCode || e.which;
+                if (k == 8) {   //8是空格键
+                    if ($(this).val().length < 1) {
+                        $(this).prev().focus();
+                        $(this).prev().focus(function() {
+                            var obj = e.srcElement ? e.srcElement: e.target;
+                            if (obj.createTextRange) { //IE浏览器
+                                var range = obj.createTextRange();
+                                range.moveStart("character", 1);
+                                range.collapse(true);
+                                range.select();
+                            }
+                        });
+                    }
+                } else {
+                    if ($(this).val().length > 0) {
+                        $(this).next().focus();
+                    }
+                }
+            })
+        });
+
+        $("input[type='text'][id^='sn']").bind('keyup',
+        function() {
+            var len = $("#sn1").val().length + $("#sn2").val().length + $("#sn3").val().length + $("#sn4").val().length + $("#sn5").val().length + $("#sn6").val().length;
+            if (len == 6) device_verify();
+        });
+
+    });
+</script>
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+            <a href="xiaoxi_contacts.html"><div class="_left"><span>取消</span></div></a>
+            选择联系人
+            <div class="_right"><span>确定(<span class="num">0</span>)</span></div>
+    </header>
+    <!--  ----------------------------联系人----------------------------->
+	<div class="main_contacts_cre">
+    	<div class="main_contacts_search">
+        	<div class="icon"><img src="../image/xiaoxi/Ellipse-5.png"></div>
+    		<div class="ipt"><input  placeholder="搜索联系人"></div>
+        	<div class="cancel"><img src="../image/xiaoxi/Ellipse-2.png"></div>
+    	</div>
+        <a href="xiaoxi_contacts_cre_gro.html"><div class="group">选择一个群</div></a>
+          <ul>
+        <div class="lately">最近联系人</div>
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                    </li>   
+    	<!---->
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+        <!---->             
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                    </li>   
+         <!---->   
+        <div class="lately">A</div>
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+        <div class="lately">B</div>
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+					<li>
+                    			<div class="sel"></div>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+          </ul>  
+	</div>
+    <div class="main_contacts_cre_overlay">
+    	
+    </div>
+    
+</body>
+</html>
+    <script type="text/javascript">
+	/*搜索框清除*/
+		$('.main_contacts_search .cancel').click(function(e) {
+            $('.main_contacts_search input').val('')
+        });
+		
+		var Current=0;
+		$('header ._right').click(function(e) {
+			if(Current==0){
+				$(this).children().addClass('current')
+				Current=1
+			}
+			else{
+				$(this).children().removeClass('current')
+				Current=0
+			}
+			$('header .block ul').slideToggle(200)
+        });
+		
+		$('.main_contacts_search .ipt input').focus(function(){
+			$('.main_contacts_overlay').show(0)	
+		}).blur(function(){
+			$('.main_contacts_overlay').hide(0)	
+		})
+		var Num=0;
+		var aLi = document.getElementsByTagName('li');
+		// var onOff = true;	// 只能控制一组！
+		for( var i=0; i<aLi.length; i++ ){
+			
+			aLi[i].onOff = true;
+			
+			aLi[i].onclick = function (){
+				if ( this.onOff ) {
+					$(this).children('.sel').addClass('current')
+					Num+=1;
+					this.onOff = false;
+				} else {
+					$(this).children('.sel').removeClass('current')
+					this.onOff = true;
+					Num-=1;
+				}
+				$('header ._right span.num').html(''+Num+'')
+			};
+			
+		}
+	</script>
+
+
+
+
+
+
+

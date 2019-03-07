@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+        <header>
+                <div class="_left"><a href="person_wmcd_wser.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                申请售后
+        </header>
+        <div class="person_wmcd_detail_wser">
+        	<ul>
+                <li class="main_li">
+                    <div class="info">
+                        <div class="pic">
+                            <img src="../image/person/book.jpg">
+                        </div>
+                        <div class="wrap">
+                            <div class="name">
+                                品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                            </div>
+                            <div class="material">
+                                天蓝色  钢化玻璃
+                            </div>
+                            <div class="price">
+                                ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                            </div>
+                            <div class="state">
+                                完成交易
+                            </div>
+                        </div><!--信息-->
+                    </div>
+                </li>
+            </ul>
+            <div class="detail">
+            	<div class="wrap clear">
+                    <div class="type">
+                        <div class="title">服务类型</div>
+                        <ul>
+                            <li class="current">退货退款</li>
+                            <li>仅退款</li>
+                            <li>换货</li>
+                        </ul>
+                    </div>
+                	<div class="line"></div>                
+                    <div class="num">
+                        <div class="title">申请数量</div>
+                        <div class="num_m">
+                            <div class="num_l">-</div> 
+                            <h1>1</h1>
+                            <div class="num_r">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="que">
+                	<div class="title">问题描述</div>
+                    <textarea placeholder="在此描述您的详细问题" maxlength='300'></textarea>
+                </div>
+                <div class="sendpic">
+                	<div class="title">上传照片</div>
+                    <ul class="pic">
+                    	<li><img src="../image/person/addpic.png"></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+			<div class="com">
+            	提交
+            </div>
+	
+    </div>
+        
+    <div class="person_wmcd_wpay_overlay">
+    	<div class="record">
+            <div class="title">确定要取消订单吗?</div>
+            <ul>
+                <li>取消</li>
+                <li>确定</li>
+            </ul>
+         </div>
+         <div class="pay">
+            <div class="title">请输入支付密码</div>
+            <div class="ipt">
+		           <input type="password" name="sn1" maxlength="1" id="sn1"/>
+		           <input type="password" name="sn2" maxlength="1" id="sn2"/>
+		           <input type="password" name="sn3" maxlength="1" id="sn3"/>
+		           <input type="password" name="sn4" maxlength="1" id="sn4"/>
+		           <input type="password" name="sn5" maxlength="1" id="sn5"/>
+		           <input type="password" name="sn6" maxlength="1" id="sn6"/>
+            </div>
+            <ul>
+                <li>取消</li>
+                <li>确定</li>
+            </ul>
+         </div>
+         </div>
+    </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+	
+	$('.person_wmcd_wpay .main_li .sel .cal').click(function(e) {
+        $('.person_wmcd_wpay_overlay').show(0).children('.record').show(0)
+    });
+	$('.person_wmcd_wpay_overlay .record ul li').click(function(e) {
+        $('.person_wmcd_wpay_overlay').hide(0).children('.record').hide(0)
+    });
+		
+	$('.person_wmcd_wgoo .main_li .sel .ent').click(function(e) {
+        $('.person_wmcd_wpay_overlay').show(0).children('.pay').show(0)
+    });
+	$('.person_set_overlay .pay ul li').click(function(e) {
+        $('.person_wmcd_wpay_overlay').hide(0).children('.pay').hide(0)
+    });
+	$('.person_wmcd_detail_wser .detail .type ul li').click(function(e) {
+        $(this).addClass('current').siblings().removeClass('current')
+    });
+		var sum;
+		$('.person_wmcd_detail_wser .detail .num .num_l').click(function(e) {
+			if( sum<1){
+				sum==0
+			}
+			else{
+				sum=parseInt($('.person_wmcd_detail_wser .detail .num .num_m h1').text())-1;
+				$('.person_wmcd_detail_wser .detail .num .num_m h1').text(sum)
+			}
+        });				
+		$('.person_wmcd_detail_wser .detail .num .num_r').click(function(e) {
+				sum=parseInt($('.person_wmcd_detail_wser .detail .num .num_m h1').text())+1;
+				$('.person_wmcd_detail_wser .detail .num .num_m h1').text(sum)
+        });
+    //输入密码
+    function device_verify() {
+        var sn = $("#sn1").val() + $("#sn2").val() + $("#sn3").val() + $("#sn4").val() + $("#sn5").val() + $("#sn6").val();
+        $(".loading_series").show(); //loading图标
+        $("#device_msg").hide(); //错误密码提示
+		
+        $.ajax({
+            cache: false,
+            type: "GET",
+            url: purl,
+            data: pparm,
+            dataType: "jsonp",
+            jsonp: "callback",
+
+            success: function(obj) {
+				
+				
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $("#sn1").focus();
+
+        //自动跳到下一个输入框  
+        $(".person_wmcd_wpay_overlay .pay .ipt input").each(function() {
+            $(this).keyup(function(e) {
+                e = window.event || e;
+                var k = e.keyCode || e.which;
+                if (k == 8) {   //8是空格键
+                    if ($(this).val().length < 1) {
+                        $(this).prev().focus();
+                        $(this).prev().focus(function() {
+                            var obj = e.srcElement ? e.srcElement: e.target;
+                            if (obj.createTextRange) { //IE浏览器
+                                var range = obj.createTextRange();
+                                range.moveStart("character", 1);
+                                range.collapse(true);
+                                range.select();
+                            }
+                        });
+                    }
+                } else {
+                    if ($(this).val().length > 0) {
+                        $(this).next().focus();
+                    }
+                }
+            })
+        });
+
+        $("input[type='text'][id^='sn']").bind('keyup',
+        function() {
+            var len = $("#sn1").val().length + $("#sn2").val().length + $("#sn3").val().length + $("#sn4").val().length + $("#sn5").val().length + $("#sn6").val().length;
+            if (len == 6) device_verify();
+        });
+
+    });
+    </script>
+
+
+

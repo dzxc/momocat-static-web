@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+        <header>
+                <div class="_left"><a href="person.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                我的粉丝
+                <div class="_right"><span>编辑</span></div>
+        </header>
+<!-----------------------------------我的粉丝------------------------------------->
+        <div class="main_person_fans">
+            <ul>
+                <li>
+                        <div class="selection"></div>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                        <div class="focus">+&nbsp;关注</div>
+                </li>   
+            <!---->
+                <li>
+                        <div class="selection"></div>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_girl.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                        <div class="focus">+&nbsp;关注</div>
+                </li>   
+            <!---->   
+                <li>
+                        <div class="selection"></div>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_boy.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                        <div class="focus">+&nbsp;关注</div>
+                </li>   
+            <!---->
+                <li>
+                        <div class="selection"></div>
+                        <div class="head">
+                               <img src="../image/remen/touxiang.jpg">
+                        </div>
+                        <div class="new">
+                                <div class="name">某某某<img src="../image/person/main_icon_girl.png"></div>
+                                <div class="autograph">行街有三傻B，一天到晚吹牛B。fuwuyuan他一...</div>
+                        </div>
+                        <div class="focus">+&nbsp;关注</div>
+                </li>   
+            </ul>  
+        </div>
+        
+        
+        <div class="main_person_fans_foot">
+        	<div class="all_select"></div>全选
+        	<div class="btn">+&nbsp;关注</div>
+        </div>
+</body>
+
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+		var aLi =$('.main_person_fans .focus');
+		// var onOff = true;	// 只能控制一组！
+		for( var i=0; i<aLi.length; i++ ){
+			
+			aLi[i].onOff = true;
+			
+			aLi[i].onclick = function (){
+				if ( this.onOff ) {
+					$(this).css({'color':'#fff','background':'#19b5ff'}).html('已关注')
+					this.onOff = false;
+				} else {
+					$(this).css({'color':'#19b5ff','background':'#fff'}).html('+&nbsp;关注')
+					this.onOff = true;
+				}
+			};
+		}
+		/*编辑*/
+		var Editor=0;
+		$('header ._right').click(function(e) {
+			if(Editor==0){
+				$(this).html('<span>取消</span>')
+				$('.main_person_fans li .selection').show(0)
+				$('.main_person_fans_foot').show(0)
+				Editor=1
+			}
+			else{
+				$(this).html('<span>编辑</span>')
+				$('.main_person_fans li .selection').hide(0)
+				$('.main_person_fans_foot').hide(0)
+				Editor=0
+			}
+        });
+		
+		/*选中*/
+		var aSel =$('.main_person_fans li .selection');
+		// var onOff = true;	// 只能控制一组！
+		for( var i=0; i<aSel.length; i++ ){
+			
+			aSel[i].onOff = true;
+			
+			aSel[i].onclick = function (){
+				if ( this.onOff ) {
+					$(this).addClass('current')
+					this.onOff = false;
+				} else {
+					$(this).removeClass('current')
+					this.onOff = true;
+				}
+			};
+		}
+		/*全选*/
+		var Select=0;
+		$('.main_person_fans_foot .all_select').click(function(e) {
+			if(Select==0){
+            	$(this).addClass('current')
+				$('.main_person_fans li .selection').addClass('current')
+				Select=1;
+			}
+			else{
+            	$(this).removeClass('current')
+				$('.main_person_fans li .selection').removeClass('current')
+				Select=0;
+			}
+        });
+		/*全部关注*/
+		var Focus=0;
+		$('.main_person_fans_foot .btn').click(function(e) {
+			if(Focus==0){
+				$(this).css({'background':'#aaaaaa'}).html('已关注')
+				Focus=1;
+			}
+			else{
+				$(this).css({'background':''}).html('+&nbsp;关注')
+				Focus=0;
+			}
+		});
+		
+		
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

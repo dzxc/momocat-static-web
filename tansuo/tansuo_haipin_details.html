@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/tansuo_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<div class="_left"><a href="tansuo_haipin.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+			活动详情
+            <div class="_right" id="haipin_details_share"><img src="../image/tansuo/iconfont-fenxiang.png"></div>
+    </header>
+    <!--  ----------------------------附近的人----------------------------->
+	<div class="main_haipin_details">
+    		<div class="intro">
+            	张靓颖空降深圳，为她即将于7月25日的深圳个唱站台，这场名为“ BANG the World”也是张靓颖出道十年的一次总结，张靓颖透露，本次巡演将包含十年间每个阶段具有代表性的歌曲和风格，作为对自己音乐道路十周年的总结。
+            </div>
+    		<div class="news">
+            	演出时间：<br>
+							2015年7月25日 周六 19:30<br>
+				演出地点：<br>
+						华润深圳湾体育中心"春茧"体育馆<br>
+				演出票价：280/480/680/980/1280元
+
+            </div>    	
+	</div>
+    <div class="main_haipin_details_footer">
+    	<div class="wrap">
+            <div class="left">
+                已申请人次<span>500</span>
+            </div>
+            <div class="right">
+                总需人次<span>2000</span>
+            </div>
+        <!--进度条--><div class="bar">
+        				<div class="bar_current"></div>
+        			</div>
+        </div>
+        <div class="btn">申请开启</div>
+    </div>
+    <div class="main_haipin_f-overlay">
+    	<div class="haipin_wrap">
+            <div class="tip">分享到</div>
+            <div class="main clear">
+                <ul>
+                    <li><img src="../image/tansuo/icon_wx.png">微信好友</li>
+                    <li><img src="../image/tansuo/icon_py.png">朋友圈</li>
+                    <li><img src="../image/tansuo/icon_qq.png">QQ好友</li>
+                    <li><img src="../image/tansuo/icon_kj.png">QQ空间</li>
+                    <li><img src="../image/tansuo/icon_wb.png">新浪微博</li>
+                </ul>
+            </div>
+            <div class="cancel">取消</div>
+        </div>	
+    </div>
+</body>
+</html>
+<script src="../js/script.js"></script>
+<script language="javascript">
+var WinH=$(window).height()
+var WinW=$(window).width()
+var M_H=WinH-50
+var M_W=WinW-112
+$('.main_haipin_details').css('height',M_H+'px')
+$('.main_haipin_details_footer .wrap').css('width',M_W+'px')
+</script>	

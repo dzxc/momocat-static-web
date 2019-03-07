@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/*************************消息未登录界面************************************/
+.not_logged .xiaoxi_icon_img {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 5%;
+}
+.not_logged {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 15%;
+}
+.not_logged p {
+	width: 60%;
+	margin: 0 auto;
+	color: #c5c4c4;
+	line-height: 1.2rem;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: 500;
+}
+.not_logged .xiaoxi_form {
+	width: 80%;
+	height: auto;
+	margin: 0.9rem auto
+}
+.not_logged .xiaoxi_form form input {
+	width: 40%;
+	height: 1.75rem;
+	border: none;
+	outline: none;
+	margin: 0 0.1rem 0 0.8rem;
+	font-size: 0.9rem;
+}
+.not_logged .xiaoxi_form form input:nth-of-type(1) {
+	background: #f2f2f2;
+	border: 1px solid #bfbfbf;
+	border-radius: 5px;
+	color: #19b5ff;
+}
+.not_logged .xiaoxi_form form input:nth-of-type(2) {
+	background: #19b5ff;
+	border-radius: 5px;
+	color: #FFF;
+}
+._mid ul li {
+	border-radius: 0.25rem 0 0 0.25rem;
+}
+/*手机*/
+@media screen and (max-width:640px) {
+.not_logged {
+	margin-top: 40% !important;
+}
+}
+/*平板*/
+@media screen and (min-width:640px) and (max-width:960px) {
+.not_logged {
+	margin-top: 40% !important;
+}
+.not_logged .xiaoxi_icon_img {
+	width: 80px;
+	height: 80px;
+}
+}
+/******************************************
+              联系人_详细资料_个人_聊天信息界面
+********************************************/
+.username {
+	width: 100%;
+	height: 4rem;
+	background: #FFF;
+	margin: 1rem 0 0 0;
+	padding-top:0.3rem;
+}
+.tx {
+	width: 94%;
+	margin: 0 auto;
+}
+.tx_a {
+	width: 2.5rem;
+}
+.tx_a img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	display: block;
+	overflow: hidden;
+}
+.tx_a span {
+	font-size: 0.5rem;
+	text-align: center;
+	color: #797979;
+	line-height: 1rem;
+	display: block;
+}
+.btn_a {
+	font-size: 0.8rem;
+	color: #fff;
+	text-align: center;
+	height: 2rem;
+	line-height: 2rem;
+	background: #cb5757;
+	border-radius: 0.2rem;
+	width: 94%;
+	margin: 1rem 0 0 3%;
+	border: none;
+	outline: none;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="person_shop_not.html"><div class="_left"><img src="../image/login/Arrow-Left-icon.png"></div></a>
+    		申请开店
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="person_shop_apply">
+    	<ul>
+            <li>
+                <span>店铺名称</span><input placeholder="请输入商品名称，最长20个汉字">
+            </li>
+            <li>
+                <span>店铺简介</span><input placeholder="简单的介绍下你的店铺">
+            </li>
+            <li>
+                <span>联系方式</span><input placeholder="请输入你的联系方式" >
+            </li>
+        </ul>
+    	<div class="board">
+        	上传店铺招牌
+        </div>
+        <div class="footer">
+        	<div class="selection"><div class="agree"></div></div>
+        	<a href="person_shop_userag.html"><span>《同意用户协议》</span></a>
+            <div class="btn">立即开店</div>
+        </div>
+	</div>
+    
+    
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+		var agree=0;
+    	$('.person_shop_apply .footer .selection').click(function(e) {
+			if(agree==0){
+            	$(this).children().show(0)
+				agree=1;
+				$('.person_shop_apply .footer .btn').css('background','#19b5ff')
+				$('.person_shop_apply .footer .btn').click(function(e) {
+                    window.location.href='person_shop_add.html'
+                });
+			}
+			else{
+            	$(this).children().hide(0)
+				agree=0;
+				$('.person_shop_apply .footer .btn').css('background','#bebebe')
+			}
+        });
+    
+    
+    </script>
+
+
+
+
+
+

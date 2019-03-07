@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="xiaoxi_contacts_chat.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            更多
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="main_contacts_chat_more">
+          <ul class="sel">
+          		<a href="xiaoxi_contacts_chat_more_mark.html"><li>备注<span>霍建华</span></li></a>
+          		<li>分组<span>朋友</span></li>
+          		<li>特别关心<div class="switch"><div class="in"></div></div></li>
+          </ul>
+         <div class="exit">
+          		删除好友
+          </div> 
+	</div>
+    <div class="contacts_chat_more_overlay">
+    	<div class="record">
+            <div class="title">将联系人“<span>霍建华</span>”删除，同时删除与他的聊天记录。</div>
+            <ul>
+                <li>取消</li>
+                <li>确定</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+    <script type="text/javascript">
+	var Switch=0;
+	$('.main_contacts_chat_more .sel li .switch').click(function(e) {
+		if(Switch==0){
+			$(this).css('background','#5ce637').children('.in').addClass('current')
+			Switch=1;
+		}
+		else{
+			$(this).css('background','#dadada').children('.in').removeClass('current')
+			Switch=0;
+		}
+    });
+	$('.main_contacts_chat_more .exit').click(function(e) {
+        $('.contacts_chat_more_overlay').show(0)
+    });
+	$('.contacts_chat_more_overlay .record ul li').click(function(e) {
+        $('.contacts_chat_more_overlay').hide(0)
+    });	
+	</script>
+
+
+
+
+
+
+

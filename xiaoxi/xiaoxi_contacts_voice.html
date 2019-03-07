@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="xiaoxi_contacts.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            <div class="_mid">
+            	在线客服
+            </div>
+           
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="main_contacts_chat">
+          <ul>
+					<li class="other">
+                                <div class="head">
+                                    <img src="../image/xiaoxi/higdoh.png">
+                                </div>
+                                 <div class="angle"></div>
+                                <div class="new">
+                                    您好，这里是冰狗客服，请问有什么能帮到您的？
+                                </div>
+                    </li>   
+    	<!---->
+					<li class="self">
+                                <div class="head">
+                                    <img src="../image/xiaoxi/cat.png">
+                                </div>
+                                 <div class="angle"></div>
+                                <div class="new">
+                                    你好，我叫阿乐，我之前在商城中了一个iPhone6S，现在黑屏了...
+
+                                </div>
+                    </li>   
+        <!---->             
+					<li class="other">
+                                <div class="head">
+                                    <img src="../image/xiaoxi/higdoh.png">
+                                </div>
+                                 <div class="angle"></div>
+                                <div class="new">
+                                    您好，这里是冰狗客服，请问有什么能帮到您的？
+                                </div>
+                    </li>   
+    	<!---->
+					<li class="self">
+                                <div class="head">
+                                    <img src="../image/xiaoxi/cat.png">
+                                </div>
+                                 <div class="angle"></div>
+                                <div class="new">
+                                    你好，我叫阿乐，我之前在商城中了一个iPhone6S，现在黑屏了...
+
+                                </div>
+                    </li>   
+          </ul>  
+	</div>
+    <div class="main_xiaoxi_chat_foot">
+    	<div class="voice"><img src="../image/xiaoxi/iconfont-yuyin.png"></div>
+        <input placeholder="" onkeyup="checkLen(this)" value="按住说活" style="text-align:center; color:#28b6ff;border:1px solid #28b6ff">
+        <div class="add"><img src="../image/xiaoxi/iconfont-tianjia.png"></div>
+        <div class="send">发送</div>
+        <div class="exp"><img src="../image/xiaoxi/iconfont-biaoqing.png"></div>
+    </div>
+    
+</body>
+</html>
+    <script type="text/javascript">
+	/*搜索框清除*/
+		$('.main_contacts_search .cancel').click(function(e) {
+            $('.main_contacts_search input').val('')
+        });
+				
+        function checkLen(obj) {  
+        
+		//判断是否有值
+		if(obj.value!=""){
+				$('.main_xiaoxi_chat_foot .send').fadeTo(200,1).show(0)
+				$('.main_xiaoxi_chat_foot .add').fadeTo(200,0).hide(0)
+			}
+		else{
+				$('.main_xiaoxi_chat_foot .send').fadeTo(200,0).hide(0)
+				$('.main_xiaoxi_chat_foot .add').fadeTo(200,1).show(0)
+		}	
+        } 
+		
+	</script>
+
+
+
+
+
+
+

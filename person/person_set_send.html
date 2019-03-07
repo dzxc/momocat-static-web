@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="person_set.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            意见反馈
+            <a href="person_set.html"><div class="_right"><span>发送</span></div></a>
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="person_set_send">
+    		<div class="tip">
+                如果您在使用冰狗时遇到问题和功能障碍，或者对我们的产品有
+                相关意见建议，欢迎您将宝贵的意见反馈给我们，谢谢！
+            </div>
+            <textarea maxlength="300" type="text" onKeyUp="checkLen(this)"></textarea>
+            <div class="num">300</div>
+	</div>
+</body>
+</html>
+    <script type="text/javascript">
+        function checkLen(obj) {  
+        
+        var maxChars = 300;//最多字符数  
+        var minChars = 6;//最小字符数 
+		 
+        if (obj.value.length > maxChars)  obj.value = obj.value.substring(0,maxChars);  
+        
+        var curr = maxChars - obj.value.length;  
+        $('.person_set_send .num').html(''+curr+'')
+        } 
+	</script>
+
+
+
+
+
+
+

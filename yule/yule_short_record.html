@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/yule_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#313131">
+	<header style="background:#313131">
+    		<a href="yule_short.html"><div class="_left" ><img src="../image/login/Arrow-Left-icon.png"></div></a>
+            <div class="_right"><img src="../image/person/camera.png"></div>
+            <div class="_righttwo"><img src="../image/person/flashlight.png"></div>
+            <div class="_rightthree"><img src="../image/yule/shipin.png"></div>
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="yule_short_record">
+    	<div class="video">
+        	<img src="../image/person/03.jpg">
+        </div>
+    	<div class="bar">
+        	<div class="in"></div>
+        </div>
+        <div class="tip">
+        	<div class="pro">20.3s</div>
+        	<ul>
+            	<li>10秒</li>
+            	<li class="current">60秒</li>
+            	<li>5分钟</li>
+            </ul>
+        </div>
+        <div class="btn">
+        	<ul>
+            	<li><img src="../image/person/erro.png"></li>
+            	<li><img src="../image/person/btn.png"></li>
+            	<li><img src="../image/person/right.png"></li>
+            </ul>
+        </div>
+        <div class="fitter">
+        	<div class="wrap">
+                <div class="title fl">滤镜</div>
+                <a href="yule_short_record_rel.html"><div class="comp fr">完成</div></a>
+            </div>
+        	<ul>
+            	<li><div class="pic"><img src="../image/yule/icon_1.png"></div>无</li>
+            	<li><div class="pic"><img src="../image/yule/icon_2.png"></div>黑白</li>
+            	<li><div class="pic"><img src="../image/yule/icon_3.png"></div>流年</li>
+            	<li><div class="pic"><img src="../image/yule/icon_4.png"></div>晨光</li>
+            	<a href="yule_short_record_more.html"><li><div class="pic"><img src="../image/yule/icon_more.png"></div>更多</li></a>
+            </ul>
+        </div>
+	</div>
+    
+    
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+		var Ing=0;
+		var num=0;
+		var Left;
+		var Num;
+		var LeftNum;
+		var SelLi=1;
+		$('.yule_short_record .tip ul li').click(function(e) {
+            $(this).addClass('current').siblings().removeClass('current')
+			SelLi=$(this).index()
+        });
+		$('.yule_short_record .btn ul li:nth-child(2) img').bind('click', function() {
+			$('.yule_short_record .tip ul').css({'visibility':'hidden'})
+			$('.yule_short_record .tip .pro').show(0)
+			if(Ing==0){
+				function record(){
+					if(num<101){
+					if(SelLi==0){
+						Left=num/10;
+						num+=1/5;	
+					}
+					else if(SelLi==1){
+						Left=num/10*6;
+						num+=1/30;
+					}
+					else if(SelLi==2){
+						Left=num/10*30;
+						num+=1/150;
+					}
+					Num=Left.toFixed(1)
+					LeftNum=num.toFixed(1)
+					$('.yule_short_record .tip .pro').css('left',''+LeftNum+'%').html(''+Num+'s')
+					$('.yule_short_record .bar .in').css('width',''+LeftNum+'%')
+					$('.yule_short_record .btn ul li:nth-child(2) img').attr('src','../image/person/icon_9.png')
+					}
+					else{
+					$('.yule_short_record .bar .in').css('width','100%')
+					$('.yule_short_record .btn ul li:nth-child(2) img').attr('src','../image/person/btn.png')
+					$('.yule_short_record .btn li img').css('display','block')
+					clearInterval(mytime)
+					}
+				}
+					mytime=setInterval(record,20)
+					Ing=1;
+			}
+			else{
+				$(this).attr('src','../image/person/btn.png')
+				Ing=0;
+				clearInterval(mytime)
+				$('.yule_short_record .btn li img').css('display','block')
+			}
+        });
+		$('.yule_short_record .btn ul li:nth-child(1) img').click(function(e) {
+			num=0;
+			$('.yule_short_record .bar .in').css('width',''+num+'%');
+			$(this).hide(0);
+			$('.yule_short_record .btn ul li:nth-child(3) img').hide(0)
+			Ing=0;
+			$('.yule_short_record .tip ul').css({'visibility':'inherit'});
+			$('.yule_short_record .tip .pro').hide(0)
+        });
+		$('.yule_short_record .btn ul li:nth-child(3) img').click(function(e) {
+			$('.yule_short_record .tip').hide(0).siblings('.yule_short_record .btn').hide(0)
+			$('.yule_short_record .fitter').show(0)
+        });
+
+
+    </script>
+
+
+
+
+
+

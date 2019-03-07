@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    	<a href="person_edit.html"><div class="_left"><img src="../image/person/Arrow_left_icon.png"></div></a>
+    	选择职业
+    	<a href="person_edit.html"><div class="_right"><span>完成</span></div></a>
+    </header>
+    <!--  ----------------------------职业取向----------------------------->
+	<div class="person_edit_career">
+                    <ul>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-it.png"></span>计算机/互联网/通信</div>
+                            <ul>
+                            	<li>工程师</li>
+                            	<li>程序员</li>
+                            	<li>UI设计师</li>
+                            	<li>运营专员</li>
+                            	<li>产品经理</li>
+                            	<li>策划师</li>
+                            	<li>市场拓展</li>
+                            	<li>网站编辑</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-gong.png"></span>生产/工艺/制造</div>
+                            <ul>
+                            	<li>管理层</li>
+                            	<li>技术员</li>
+                            	<li>检验员</li>
+                            	<li>质检员</li>
+                            	<li>车间主任</li>
+                            	<li>组长</li>
+                            	<li>员工</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-shang.png"></span>商业/服务业/个体经营</div>
+                            <ul>
+                            	<li>服务员</li>
+                            	<li>收银员</li>
+                            	<li>保安大哥</li>
+                            	<li>销售经理</li>
+                            	<li>文秘</li>
+                            	<li>会计</li>
+                            	<li>采购员</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-jin.png"></span>金融/银行/投资/保险</div>
+                            <ul>
+                            	<li>证券分析师</li>
+                            	<li>操盘手</li>
+                            	<li>保险经理</li>
+                            	<li>理财顾问</li>
+                            	<li>保险精算师</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-wen.png"></span>文化/广告/传媒</div>
+                            <ul>
+                            	<li>作家</li>
+                            	<li>广告策划</li>
+                            	<li>主持人</li>
+                            	<li>编导</li>
+                            	<li>草根写手</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-yi.png"></span>娱乐/艺术/表演</div>
+                            <ul>
+                            	<li>导演</li>
+                            	<li>歌手</li>
+                            	<li>模特</li>
+                            	<li>摄影师</li>
+                            	<li>编剧</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-yixue.png"></span>医疗/护理/制药</div>
+                            <ul>
+                            	<li>医生</li>
+                            	<li>营养师</li>
+                            	<li>护士</li>
+                            	<li>护工</li>
+                            	<li>药剂师</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-fa.png"></span>公务员/律师</div>
+                            <ul>
+                            	<li>公务员</li>
+                            	<li>律师</li>
+                            	<li>警察</li>
+                            	<li>军人</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-jiao.png"></span>教育/培训</div>
+                            <ul>
+                            	<li>教师</li>
+                            	<li>教练</li>
+                            	<li>户外拓展</li>
+                            	<li>讲师</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+						<li>
+                        	<div class="wrap"><span class="pic"><img src="../image/person/icon-xue.png"></span>学生</div>
+                            <ul>
+                            	<li>中学生</li>
+                            	<li>大学生</li>
+                            	<li>研究生</li>
+                            	<li>留学生</li>
+                            	<li>其他</li>
+                            </ul>
+                        </li>
+                    </ul>    
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript">
+		var aLi =$('.person_edit_career ul li .wrap');
+		// var onOff = true;	// 只能控制一组！
+		for( var i=0; i<aLi.length; i++ ){
+			
+			aLi[i].onOff = true;
+			
+			aLi[i].onclick = function (){
+				if ( this.onOff ) {
+					$(this).siblings('ul').slideDown(200)
+					$(this).css({'background':'#fff url(../image/person/Arrow_Top_icon.png) no-repeat 97% center','background-size':'0.8rem'})
+					this.onOff = false;
+				} else {
+					$(this).siblings('ul').slideUp(200)
+					$(this).css({'background':'#fff url(../image/person/Arrow_Bottom_icon.png) no-repeat 97% center','background-size':'0.8rem'})
+					this.onOff = true;
+				}
+			};
+		}
+		
+		$('.person_edit_career ul li .wrap').click(function(e) {
+        });
+		$('.person_edit_career ul li ul li').click(function(e) {
+			$('.person_edit_career ul li ul li').removeClass('current')
+            $(this).addClass('current')
+			
+			
+        });;
+</script>
+
+
+
+
+
+
+
+

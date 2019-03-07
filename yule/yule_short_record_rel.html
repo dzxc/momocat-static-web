@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/yule_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#313131">
+	<header style="background:#313131">
+    		<a href="yule_short_record.html"><div class="_left" ><img src="../image/login/Arrow-Left-icon.png"></div></a>
+            发布
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="yule_short_record_rel">
+    	<div class="video">
+        	<img src="../image/yule/14.jpg">
+        </div>
+        <textarea onkeyup="checkLen(this)" placeholder="发表一下心情吧" ></textarea>
+        <ul class="icon">
+        	<li>#话题#</li>
+        	<li></li>
+        	<li></li>
+        </ul>
+    </div>
+	<a href="yule_short.html"><div class="yule_short_record_rel_foot">
+    	立即发布
+    </div></a>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+    <script type="text/javascript"> 
+        
+        function checkLen(obj) {  
+        
+        var maxChars = 50;//最多字符数  
+        
+        if (obj.value.length > maxChars)  obj.value = obj.value.substring(0,maxChars);  
+        
+        var curr = maxChars - obj.value.length;  
+        
+        } 
+        
+   </script>	
+
+
+
+
+

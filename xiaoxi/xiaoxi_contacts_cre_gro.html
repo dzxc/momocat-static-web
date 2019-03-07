@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+            <a href="xiaoxi_contacts_cre.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            选择一个群
+    </header>
+    <!--  ----------------------------联系人----------------------------->
+	<div class="main_contacts_cre_gro">
+          <ul>
+					<li>
+                                <div class="head">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                </div>
+                                <div class="name">冰狗大家族<span>(30人)</span></div>
+                    </li>   
+    	<!---->
+					<li>
+                                <div class="head">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                </div>
+                                <div class="name">冰狗大家族<span>(30人)</span></div>
+                    </li>   
+    	<!---->
+					<li>
+                                <div class="head">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                    <img src="../image/xiaoxi/01.jpg">
+                                </div>
+                                <div class="name">冰狗大家族<span>(30人)</span></div>
+                    </li>   
+          </ul>  
+	</div>
+    
+</body>
+</html>
+    <script type="text/javascript">
+	/*搜索框清除*/
+		$('.main_contacts_search .cancel').click(function(e) {
+            $('.main_contacts_search input').val('')
+        });
+		
+		var Current=0;
+		$('header ._right').click(function(e) {
+			if(Current==0){
+				$(this).children().addClass('current')
+				Current=1
+			}
+			else{
+				$(this).children().removeClass('current')
+				Current=0
+			}
+			$('header .block ul').slideToggle(200)
+        });
+		
+		$('.main_contacts_search .ipt input').focus(function(){
+			$('.main_contacts_overlay').show(0)	
+		}).blur(function(){
+			$('.main_contacts_overlay').hide(0)	
+		})
+		var Select=0;
+		var Num=0;
+		$('.main_contacts_cre li').click(function(e) {
+			if(Select==0){
+            	$(this).children('.sel').addClass('current')
+				Select=1;
+				Num+=1;
+			}
+		else{
+            	$(this).children('.sel').removeClass('current')
+				Select=0;
+		}
+		$('header ._right span.num').html(''+Num+'')
+        });
+	</script>
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="person_set.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+            支付设置
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="person_set_pay">
+          <ul class="sel">
+          		<a href="person_set_payset.html"><li>设置支付密码</li></a>
+          		<li>指纹支付<div class="switch"><div class="in"></div></div></li>
+          </ul>
+	</div>
+</body>
+</html>
+    <script type="text/javascript">
+	var Switch=0;
+	$('.person_set_pay .sel li .switch').click(function(e) {
+		if(Switch==0){
+			$(this).css('background','#5ce637').children('.in').addClass('current')
+			Switch=1;
+		}
+		else{
+			$(this).css('background','#dadada').children('.in').removeClass('current')
+			Switch=0;
+		}
+    });
+	</script>
+
+
+
+
+
+
+

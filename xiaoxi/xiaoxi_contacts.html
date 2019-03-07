@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+            <div class="mid">
+                <ul>
+                		<a href="xiaoxi_news.html"><li>消息</li></a>
+                		<li>联系人</li>
+                </ul>
+            </div>
+            <div class="_right" id="scale"><img src="../image/xiaoxi/iconfont-chenghao.png"></div>
+            <div class="block">
+            	<ul>
+                	<div class="angle"></div>
+                	<li><img src="../image/xiaoxi/icon_addfr_1.png">添加朋友</li>
+                	<li><img src="../image/xiaoxi/icon_addfr_2.png">创建群聊</li>
+                </ul>
+            </div>
+    </header>
+    <!--  ----------------------------联系人----------------------------->
+	<div class="main_contacts">
+    	<div class="main_contacts_search">
+        	<div class="icon"><img src="../image/xiaoxi/Ellipse-5.png"></div>
+    		<div class="ipt"><input  placeholder="搜索联系人"></div>
+        	<div class="cancel"><img src="../image/xiaoxi/Ellipse-2.png"></div>
+    	</div>
+          <ul>
+        <div class="lately">最近联系人</div>
+					<a href="xiaoxi_contacts_chat.html"><li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                    </li></a>   
+    	<!---->
+					<a href="xiaoxi_contacts_chat.html"><li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li></a>   
+        <!---->             
+					<a href="xiaoxi_contacts_chat.html"><li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                    </li></a>   
+         <!---->   
+        <div class="lately">A</div>
+					<a href="xiaoxi_contacts_chat.html"><li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li></a>   
+					<a href="xiaoxi_contacts_chat.html"><li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                    </li></a>   
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li> 
+        <div class="lately">B</div>
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                    </li>   
+          </ul>  
+	</div>
+    <div class="main_contacts_overlay">
+    
+    </div>
+    
+	<footer>
+         	 <ul>
+                    <a href="../remen/remen.html"><li>
+                        <img src="../image/tansuo/remen_moren.png" aria-hidden="true">热门
+                    </li></a>
+                 	<li class="active">
+                        <img src="../image/xiaoxi/xiaoxi_xuanzhong.png" aria-hidden="true">消息
+                    </li>
+					<a href="../yule/yule_dynamic.html"><li class="main">
+                    	<div class="g_wrap">
+                        	<img src="../image/tansuo/main_icon.png" aria-hidden="true">
+                        </div>
+                    </li></a>
+                    <a href="../tansuo/tansuo.html"><li>
+                        <img src="../image/xiaoxi/tansuo-.png" aria-hidden="true">探索
+                    </li></a>
+                    <a href="../person/person.html"><li>
+                        <img src="../image/tansuo/wo.png" aria-hidden="true">我
+                    </li></a>
+       		 </ul>	
+    </footer>
+</body>
+</html>
+    <script type="text/javascript">
+	/*搜索框清除*/
+		$('.main_contacts_search .cancel').click(function(e) {
+            $('.main_contacts_search input').val('')
+        });
+		
+		var Current=0;
+		$('header ._right').click(function(e) {
+			if(Current==0){
+				$(this).children().addClass('current')
+				Current=1
+			}
+			else{
+				$(this).children().removeClass('current')
+				Current=0
+			}
+			$('header .block ul').slideToggle(200)
+        });
+		
+		$('.main_contacts_search .ipt input').focus(function(){
+			$('.main_contacts_overlay').show(0)	
+		}).blur(function(){
+			$('.main_contacts_overlay').hide(0)	
+		})
+		$('header .block ul li:nth-child(2)').click(function(e) {
+            window.location.href='xiaoxi_contacts_fri.html'
+        });
+		$('header .block ul li:nth-child(3)').click(function(e) {
+            window.location.href='xiaoxi_contacts_cre.html'
+        });
+	</script>
+
+
+
+
+
+
+

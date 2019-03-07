@@ -1,0 +1,1117 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: "Microsoft YaHei"
+}
+body {
+	font-family: "Microsoft YaHei";
+	font-size: 0.7rem;
+	color: #333;
+	line-height: 0.7rem;
+	width: 100%;
+}
+em {
+	font-style: normal
+}
+li {
+	list-style: none
+}
+a {
+	text-decoration: none;
+	outline: 0;
+	color: #333;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+table {
+	border-collapse: collapse;
+}
+input, textarea {
+	font-family: "Microsoft YaHei";
+	padding: 0;
+}
+textarea {
+	resize: none;
+	overflow: auto;
+}
+textarea:focus {
+	outline: none;
+}
+input:focus {
+	outline: none;
+}
+.clear {
+	zoom: 1
+}
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+/********************************************************
+                     个人中心登录界面
+*********************************************************/
+/*头部*/
+.new-header {
+	background: #19b5ff;
+	width: 100%;
+	height: 2.5rem;
+	/* position: fixed;
+    left: 0;
+    top: 0;*/
+	z-index: 97;
+}
+.new-header h2 {
+	line-height: 2.5rem;
+	color: #fff;
+	text-align: center;
+	font-size: 0.9rem;
+}
+.usr_top {
+	height: auto;
+	background-image: url(../image/user/user_bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	padding-bottom: 0.3rem;
+}
+.user_log {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 55px;
+}
+.user_img img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -25px;
+	display: block;
+}
+.user_info {
+	margin-top: 15px;
+}
+.user_info .user_name {
+	font-size: 0.7rem;
+	color: #797979;
+	line-height: 1.2rem;
+}
+.user_info .user_dengji {
+	font-size: 0.7rem;
+	color: #797979;
+	line-height: 0.9rem;
+}
+/**内容*/
+/*.not_logged {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 15%;
+}
+.not_logged p {
+	width: 60%;
+	margin: 0 auto;
+	color: #c5c4c4;
+	line-height: 1.2rem;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: 500;
+}
+.not_logged .xiaoxi_form {
+	width: 80%;
+	height: auto;
+	margin: 0.9rem auto
+}
+.not_logged .xiaoxi_form form input {
+	width: 40%;
+	height: 1.75rem;
+	border: none;
+	outline: none;
+	margin: 0 0.1rem 0 0.8rem;
+	font-size: 0.9rem;
+}
+.not_logged .xiaoxi_form form input:nth-of-type(1) {
+	background: #f2f2f2;
+	border: 1px solid #bfbfbf;
+	border-radius: 5px;
+	color: #19b5ff;
+}
+.not_logged .xiaoxi_form form input:nth-of-type(2) {
+	background: #19b5ff;
+	border-radius: 5px;
+	color: #FFF;
+}*/
+/*手机*/
+@media screen and (max-width:640px) {
+.not_logged {
+	margin-top: 25% !important;
+}
+}
+/*平板*/
+@media screen and (min-width:640px) and (max-width:960px) {
+.not_logged {
+	margin-top: 20% !important;
+}
+.not_logged .xiaoxi_icon_img {
+	width: 80px;
+	height: 80px;
+}
+.success {
+	width: 30% !important;
+	left: 35% !important;
+}
+}
+/*电脑*/
+@media screen and (min-width:960px) {
+.not_logged {
+	margin-top: 2% !important;
+}
+.say textarea {
+	width: 73%;
+}
+}
+/********************************************************
+                     分享界面
+*********************************************************/
+.new-a-back {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 30px;
+	height: 32px;
+}
+.new-a-back span {
+	display: inline-block;
+	width: 10px;
+	height: 18px;
+	margin-top: 6px;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+.new-a-back img {
+	height: 1rem;
+	display: block;
+	margin: 0.5rem 0 0 0rem;
+}
+.new-a-jd {
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	width: 37px;
+	height: 30px;
+}
+.new-a-jd span {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	margin: 8px 0 0 8px;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+.new-a-jd img {
+	height: 1rem;
+	display: block;
+	margin: 0.5rem 0.5rem 0 0;
+}
+/*用户头像*/
+.usr_top_a {
+	height: 100px;
+	position: relative;
+	text-align: center;
+	padding-bottom: 0.3rem;
+}
+.user_log_a {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 55px;
+}
+.user_img_a img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -25px;
+	display: block;
+}
+/*二维码*/
+.code {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	border: 2px solid #e4e4e4;
+	position: relative;
+}
+.code p {
+	width: 79%;
+	margin: 0 auto;
+	line-height: 1.3rem;
+	font-size: 0.75rem;
+	color: #666666;
+}
+.code .qr {
+	width: 100%;
+	height: auto;
+	background: #e4e4e4;
+}
+.code .qr img {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	display: block;
+	padding: 1rem 0;
+}
+/*分享成功*/
+.success {
+	width: 40%;
+	height: auto;
+	background: #000;
+	margin: 0 auto;
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	border-radius: 10px;
+	display: none;
+	opacity: 0.8;
+}
+.success .wz_p img {
+	width: 35px;
+	height: 35px;
+	margin: 0 auto;
+	display: block;
+}
+.success .wz_p p {
+	text-align: center;
+	color: #FFF;
+	padding: 0.2rem 0;
+}
+/*删除功能*/
+.c_chat_list {
+	width: 100%;
+	margin: 10px auto 0px auto;
+}
+.c_chat_wrap {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 95%;
+	height: 3.4rem;
+	border-bottom: 1px solid #fc9a6e;
+}
+.c_chat_text {
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.c_chat_text .MOMO {
+	font-size: 0.8rem;
+	color: #333;
+	margin-bottom: 0.1rem;
+}
+.c_chat_text p {
+	font-size: 0.6rem;
+	color: #999999;
+}
+.c_chat_text p span {
+	padding: 0px 0.2rem;
+	line-height: 30px;
+}
+.c_chat_photo {
+	flex-grow: 0;
+}
+.c_chat_text {
+	flex-grow: 1;
+}
+.c_chat_local {
+	flex-grow: 0;
+}
+.c_chat_list .mui-table-view-cell {
+	padding: 0;
+	width: 100%;
+	height: 3.4rem;
+	border: none;
+}
+/*************************************************************
+                       消息未登录界面
+**************************************************************/
+.not_logged {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 15%  !important;
+}
+.not_logged .xiaoxi_icon_img {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 5%;
+}
+.not_logged p {
+	width: 60%;
+	margin: 0 auto;
+	color: #c5c4c4;
+	line-height: 1.2rem;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: 500;
+}
+.not_logged .xiaoxi_form {
+	width: 80%;
+	height: auto;
+	margin: 0.9rem auto
+}
+.not_logged .xiaoxi_form form input {
+	width: 40%;
+	height: 1.75rem;
+	line-height: 1.75rem;
+	border: none;
+	outline: none;
+	margin: 0 0.1rem 0 0.8rem;
+	font-size: 0.9rem;
+}
+.not_logged .xiaoxi_form form input:nth-of-type(1) {
+	background: #f2f2f2;
+	border: 1px solid #bfbfbf;
+	border-radius: 5px;
+	color: #19b5ff;
+	position: relative;
+}
+.not_logged .xiaoxi_form form input:nth-of-type(2) {
+	background: #19b5ff;
+	border-radius: 5px;
+	color: #FFF;
+	position: relative;
+}
+._mid ul li {
+	border-radius: 0.25rem 0 0 0.25rem;
+}
+/*手机*/
+@media screen and (max-width:640px) {
+.not_logged {
+	margin-top: 30% !important;
+}
+}
+/*平板*/
+@media screen and (min-width:640px) and (max-width:960px) {
+.not_logged {
+	margin-top: 25% !important;
+}
+.not_logged .xiaoxi_icon_img {
+	width: 80px;
+	height: 80px;
+}
+}
+/******************************************************************
+     我的店铺页面
+*********************************************************************/
+.jia {
+	width: 100px;
+	height: 100px;
+	margin: 2rem auto;
+}
+.jia img {
+	width: 100%;
+	height: 100%;
+}
+.text {
+	width: 100%;
+	height: 2.7rem;
+	border-bottom: 1px solid #ebebeb;
+	background: #FFFFFF;
+	position: relative;
+}
+.text textarea {
+	border: none;
+	width: 100%;
+	display: block;
+	height: 200px;
+	outline: none;
+	font-size: 0.5rem;
+	color: #999999;
+	margin-top: 5px;
+	padding-left: 0.5rem;
+}
+.text span {
+	position: absolute;
+	bottom: 0;
+	right: 0.5rem;
+}
+.person_shop_add_foot_a {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	left: 0;
+	bottom: 0;
+}
+.addimg_a li {
+	background: #fff;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	font-size: 0.75rem;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #ebebeb;
+	display: none;
+}
+.addimg_a li:nth-of-type(3) {
+	margin-bottom: 0.2rem;
+}
+/*黑色遮罩层*/
+.hs {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.7;
+	z-index: 99;
+	display: none;
+}
+/*********************************************************************
+                           活动报名页面
+**********************************************************************/
+.new-header-dt {
+	position: relative;
+	z-index: 8888;
+	height: 50px;
+	width: 100%;
+	background-color: #19b5ff;
+}
+.new-header-dt h2 {
+	height: 50px;
+	line-height: 50px;
+	font-weight: 400;
+	font-size: 20px;
+	color: #fff;
+	text-align: center
+}
+.new-a-back-dt {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 30px;
+	height: 32px;
+}
+.new-a-back-dt span {
+	display: inline-block;
+	width: 10px;
+	height: 18px;
+	margin-top: 6px;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+.new-a-back-dt img {
+	width: 25px;
+	height: 25px;
+	display: block;
+	margin: 6px 0px 0px 1px;
+}
+.new-a-jd-dt {
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	width: 37px;
+	height: 30px;
+}
+.new-a-jd-dt span {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	margin: 8px 0 0 8px;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+.new-a-jd-dt img {
+	width: 25px;
+	height: 25px;
+	display: block;
+	margin: 6px 0px 0px 1px;
+}
+/*用户信息分类*/
+.mui-table-view_a {
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	background: #FFFFFF;
+	overflow: hidden;
+}
+.mui-table-view_a li {
+	color: #6e6e6e;
+	line-height: 3.2rem;
+	border-bottom: 1px solid #d9d9d9;
+	padding-left: 3%;
+	overflow: hidden;
+	font-size: 1rem;
+}
+.mui-table-view_a li input {
+	border: none;
+	padding-left: 1rem;
+	color: #e2e2e2;
+	font-size: 1rem;
+}
+form input {
+	width: 100%;
+	height: 3.4rem;
+	border: none;
+	outline: none;
+	color: #FFFFFF;
+	background: #19b5ff;
+	line-height: 3.4rem;
+	text-align: center;
+	font-size: 1.3rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+/******************************************************************
+      活动报名宣传页面
+*******************************************************************/
+.main_aboust {
+	background: url(../image/tansuo/bg.png) no-repeat;
+	background-size: cover;
+}
+.new-header-dt-a {
+	position: relative;
+	z-index: 8888;
+	height: 50px;
+	width: 100%;
+}
+.new-header-dt-a h2 {
+	height: 50px;
+	line-height: 50px;
+	font-weight: 400;
+	font-size: 20px;
+	color: #fff;
+	text-align: center
+}
+.new-a-back-dt-a {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 30px;
+	height: 32px;
+}
+.new-a-back-dt-a span {
+	display: inline-block;
+	width: 10px;
+	height: 18px;
+	margin-top: 6px;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+.new-a-back-dt-a img {
+	width: 25px;
+	height: 25px;
+	display: block;
+	margin: 6px 0px 0px 1px;
+}
+.new-a-jd-dt-a {
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	width: 37px;
+	height: 30px;
+}
+.new-a-jd-dt-a span {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	margin: 8px 0 0 8px;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+.new-a-jd-dt-a img {
+	width: 25px;
+	height: 25px;
+	display: block;
+	margin: 6px 0px 0px 1px;
+}
+/*为企业寻找代言人*/
+.seek {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	position: absolute;
+	top: 17rem;
+	left: 10%;
+}
+.seek p {
+	text-align: center;
+	color: #FFF;
+	font-size: 1.3rem;
+	display: block;
+	margin: 1rem 0;
+}
+.seek .address {
+	width: 100%;
+	height: auto;
+	background: #06F;
+	margin-top: 1.5rem;
+}
+.seek .address ul li {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.seek .address ul li img {
+	width: 20px;
+	height: 20px;
+}
+.seek .address ul li span {
+	color: #FFF;
+	padding-left: 0.6rem;
+	font-size: 0.7rem;
+}
+/*活动预期开始*/
+.expect {
+	width: 98%;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 7rem;
+	left: 1%;
+}
+.expect h3, p {
+	color: #FFF;
+	font-size: 0.7rem;
+	line-height: 1.4rem;
+}
+/*底部*/
+.foonter_a {
+	width: 100%;
+	height: 2.5rem;
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.foonter_a ul li {
+	float: left;
+	width: 50%;
+	text-align: center;
+	height: 2.5rem;
+}
+.foonter_a ul li:nth-of-type(2) {
+	background: #f26262
+}
+.foonter_a ul li img {
+	width: 25px;
+	height: 25px;
+	margin: 0.5rem 0;
+}
+.foonter_a ul li a span {
+	padding-left: 0.6rem;
+	color: #FFF;
+	font-size: 0.7rem;
+}
+/*分享*/
+.main_haipin_f-overlay {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.haipin_wrap {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.haipin_wrap .share {
+	font-size: 0.7rem;
+}
+.main_haipin_f-overlay .share ul li {
+	float: left;
+	width: 25%;
+	background: #fff;
+	padding: 0.9rem 0;
+	text-align: center;
+	border-bottom: 1px solid #d9d9d9;
+}
+.main_haipin_f-overlay .share ul li img {
+	display: block;
+	vertical-align: middle;
+	margin: 0 auto 0.2rem auto;
+	width: 60%;
+}
+.main_haipin_f-overlay .cancel {
+	text-align: center;
+	background: #fff;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 0.7rem;
+}
+@media only screen and (max-width: 340px) {
+/*iphone4/4s/5*/
+.seek {
+	top: 18rem;
+}
+.expect {
+	bottom: 4rem;
+}
+}
+@media (min-width: 341px) and (max-width: 375px) {
+/*iphone6*/
+.seek {
+	top: 21rem;
+}
+.expect {
+	bottom: 4rem;
+}
+.say textarea {
+	width: 55%;
+}
+}
+@media (min-width:414px) and (max-width:736px) {
+/*iphone6plus*/
+.seek {
+	top: 23rem;
+}
+.say textarea {
+	width: 58%;
+}
+}
+@media screen and (min-width:600px) and (max-width:960px) {
+/*平板*/
+.seek {
+	top: 42rem;
+}
+.say textarea {
+	width: 58%;
+}
+}
+/*************************************************************
+                     娱乐圈短片详情页面
+*******************************************************************/
+.forward {
+	width: 96%;
+	height: auto;
+	margin: 0 auto;
+	position: absolute;
+	top: 6rem;
+	left: 2%;
+	background: #fff;
+	border-radius: 5px;
+	z-index: 999;
+	display: none;
+}
+.forward .forward_main {
+	width: 100%;
+	height: 1.5rem;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 1.5rem;
+	padding: 0.2rem 0;
+}
+.forward .forward_main p {
+	color: #333;
+	text-align: center;
+	display: block;
+	float: left;
+	margin-left: 35%;
+	font-size: 0.8rem;
+}
+.forward .forward_main a img {
+	float: right;
+	width: 0.7rem;
+	height: 0.7rem;
+	margin: 0.2rem 0.3rem 0 0;
+}
+.say {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.xiaomuw img {
+	width: 6rem;
+	height: 4rem;
+	float: left;
+	margin: 0.5rem 0 0.5rem 0.5rem;
+}
+.say textarea {
+	float: right;
+	margin-right: 6%;
+	height: 4rem;
+	color: #999999;
+	margin-top: 0.5rem;
+	border: none;
+}
+.bq {
+	width: 100%;
+}
+.bq img {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: 0.2rem 0.2rem;
+}
+.tj button {
+	width: 94%;
+	height: 1.5rem;
+	margin: 0.2rem auto;
+	outline: none;
+	border: none;
+	color: #FFF;
+	background: #19b5ff;
+	font-size: 0.75rem;
+	font-family: "微软雅黑";
+	display: block;
+	border-radius: 5px
+}
+ul.control li .fx img {
+	height: 0.8rem;
+	margin: 0.2rem 0.15rem 0 0;
+}
+ul.control li .fx span {
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.65rem;
+	color: #959595;
+}
+ul.control li .z img {
+	height: 0.8rem;
+	margin: 0.2rem 0.15rem 0 0;
+}
+ul.control li .z span {
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.65rem;
+	color: #959595;
+}
+.hs_a {
+	background: #000;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: none;
+	z-index: 99;
+}
+/*点击赞出现底部登录*/
+.not_logged_in {
+	width: 100%;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 99;
+	display: none;
+}
+.not_logged_in p img {
+	width: 1rem;
+	height: 1rem;
+	margin: 0.5rem 0.5rem;
+	display: block;
+}
+.not_logged_in .not_logged_in_wzicon {
+	width: 80%;
+	margin: 0 auto;
+}
+.not_logged_in .not_logged_in_wzicon img {
+	width: 4rem;
+	height: 4rem;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+.not_logged_in .not_logged_in_wzicon p {
+	text-align: center;
+	margin: 0.5rem 0;
+	color: #acacac;
+}
+.register {
+	width: 100%;
+	padding: 0.5rem 0;
+}
+.register button {
+	width: 45%;
+	height: 1.75rem;
+	border: none;
+	outline: none;
+	margin: 0 0.1rem 0 0.3rem;
+	line-height: 1.75rem;
+	font-size: 0.9rem;
+}
+.register button:nth-of-type(1) {
+	background: #f2f2f2;
+	border: 1px solid #bfbfbf;
+	border-radius: 5px;
+	color: #19b5ff;
+}
+.register button:nth-of-type(2) {
+	background: #19b5ff;
+	border-radius: 5px;
+	color: #FFF;
+}
+/******************************************************
+                   娱乐圈关注送礼物界面
+***********************************************************/
+.i-banner {
+	height: auto;
+	width: 100%;
+	margin: 2.5rem auto 0.5rem 0;
+	background: #FFF;
+	padding: 0.3rem 0;
+}
+.i-banner img {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+}
+.swiper-slide {
+	display: block !important;
+}
+#li-span samp {
+	font-size: 0.6rem;
+	display: block;
+	color: #666666;
+	margin: 0.2rem 0;
+}
+.carousel {
+	background: #FFF;
+	width: 100%;
+	/*padding:0.2rem 0;*/
+	margin: 0.5rem 0;
+}
+.user_information {
+	width: 94%;
+	overflow: hidden;
+	padding: 0.2rem 3% 0.2rem 3%;
+	background: #FFF;
+}
+.user_information .user_pic_a {
+	border-radius: 50%;
+	overflow: hidden;
+	height: 2rem;
+	width: 2rem;
+	float: left;
+	margin-right: 0.2rem;
+}
+.user_information .user_pic_a img {
+	height: 100%;
+}
+.user_information .user_wrap_a .user_name_a {
+	font-size: 0.75rem;
+	color: #444444;
+	line-height: 1rem;
+}
+.user_information .user_wrap_a .user_time_a {
+	font-size: 0.6rem;
+	color: #a2a2a2;
+	line-height: 1rem;
+}
+.form_btn  .gwc {
+	position: absolute;
+	top: 0.2rem;
+	left: 0.2rem;
+	width: 0.9rem;
+	height: 0.9rem;
+}
+.user_information .form_btn {
+	position: relative;
+	float: right;
+	margin: 0.4rem 0 0 0.2rem;
+}
+.user_information .form_btn .shoop {
+	width: 3rem;
+	height: 1.2rem;
+	border: none;
+	outline: none;
+	background: #19b5ff;
+	border-radius: 0.2rem;
+	color: #FFF;
+	font-size: 0.7rem;
+	padding-left: 1rem;
+	font-family:"微软雅黑";
+	line-height:1.2rem;
+}
+.news .video {
+	width: 100%;
+	padding: 0.1rem 0;
+}
+.news .video img {
+	display: block;
+	width: 100%;
+}
+.control {
+	overflow: hidden;
+	height: 1.2rem;
+	padding: 0.3rem 0;
+}
+.control li {
+	background: #fff;
+	float: left;
+	width: 25%;
+	height: 100%;
+	border-left: 1px solid #ebebeb;
+	margin-left: -1px;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+.control li .wrap {
+	overflow: hidden;
+	margin: 0 auto;
+}
+.control li .wrap img {
+	height: 0.8rem;
+	margin: 0.2rem 0.15rem 0 0;
+}
+.control li .wrap span {
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.65rem;
+	color: #959595;
+}
+.edg .user_wz {
+	width: 95%;
+	margin: 0 auto;
+}
+.edg .user_wz p {
+	color: #19b5ff;
+	font-size: 0.8rem;
+	margin: 0.3rem 0;
+	display: block;
+}
+.edg .user_wz p:nth-of-type(2) {
+	color: #666666;
+	font-size: 0.75rem;
+}
+
+/*送花*/
+.swiper-wrapper li{
+	 width:100% !important;
+}

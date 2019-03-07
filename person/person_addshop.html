@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/tansuo_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+        <header>
+                <div class="_left"><a href="person.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                购物车
+        </header>
+        <ul class="main_one_addshop">
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥<span class="pri">28.00</span>
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>0</h1>
+            		<div class="num_r">+</div>
+                </div>
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥<span class="pri">28.00</span>
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>0</h1>
+            		<div class="num_r">+</div>
+                </div>
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥<span class="pri">28.00</span>
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>0</h1>
+            		<div class="num_r">+</div>
+                </div>
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥<span class="pri">28.00</span>
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>0</h1>
+            		<div class="num_r">+</div>
+                </div>
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥<span class="pri">28.00</span>
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>0</h1>
+            		<div class="num_r">+</div>
+                </div>
+            </li>
+        </ul>
+        <div class="main_one_addshop_foot">
+        	<div class="all_select"></div>全选
+        	<a href="person_addshop_sub.html"><div class="btn">去结算(<span>0</span>)</div></a>
+        	<div class="add">合计:<span>￥0.00</span></div>
+        </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+		var sum=0;
+		var Num=0;
+		var aLi =$('.main_one_addshop .main_li .selection');
+		var All=0;
+		var Sel=0;
+		var NumR =$('.main_one_addshop .main_li .num_m .num_r');
+		var mNum;
+		var NumL =$('.main_one_addshop .main_li .num_m .num_l');
+		// var onOff = true;	// 只能控制一组！
+		for( var i=0; i<aLi.length; i++ ){
+		//选择	
+			aLi[i].onOff = true;
+			aLi[i].onclick = function (){
+				if ( this.onOff ) {
+					$(this).addClass('current')
+					Num=Num+parseFloat($(this).siblings().children('.price').children('.pri').html())
+					this.onOff = false;
+					sum+=1;
+				} else {
+					$(this).removeClass('current')
+					Num=Num-parseFloat($(this).siblings().children('.price').children('.pri').html())
+					this.onOff = true;
+					sum-=1;
+				}
+			
+			$('.main_one_addshop_foot .btn span').html(sum)
+			$('.main_one_addshop_foot .add span').html('￥'+Num.toFixed(2))	
+			};
+			All=All+parseFloat($('.main_one_addshop .main_li .price .pri').html())
+		//数量	
+			NumR[i].onclick = function (){
+				mNum=parseInt($(this).siblings('h1').html())+1 
+             	$(this).siblings('h1').html(mNum)
+            };
+			NumL[i].onclick = function (){
+				mNum=parseInt($(this).siblings('h1').html())-1 
+				if(mNum<0){mNum=0}
+             	$(this).siblings('h1').html(mNum)
+            };
+		}
+		//全选
+			$('.main_one_addshop_foot .all_select').click(function(e) {
+				if(Sel==0){
+					$('.main_one_addshop_foot .add span').html('￥'+All.toFixed(2))
+					$(this).addClass('current')
+					aLi.addClass('current')
+					Sel=1;
+					$('.main_one_addshop_foot .btn span').html(aLi.length)
+				for( var i=0; i<aLi.length; i++ ){
+					aLi[i].onOff=false
+				}
+					Num=All;
+					sum=aLi.length;
+				}
+				else{
+					$('.main_one_addshop_foot .add span').html('￥0.00')
+					$(this).removeClass('current')
+					aLi.removeClass('current')	
+					Sel=0;	
+					$('.main_one_addshop_foot .btn span').html(0)
+				}
+            });
+			
+			
+    </script>
+
+
+

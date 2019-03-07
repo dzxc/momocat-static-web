@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+		<a href="xiaoxi_contacts.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+        添加朋友
+    </header>
+    <!--  ----------------------------联系人----------------------------->
+	<div class="main_contacts_fri">
+    	<div class="main_contacts_fri_search">
+        	<div class="icon"><img src="../image/xiaoxi/Ellipse-5.png"></div>
+    		<div class="ipt"><input  placeholder="搜索朋友"></div>
+        	<div class="cancel"><img src="../image/xiaoxi/Ellipse-2.png"></div>
+    	</div>
+        <div class="f_phone">
+        	<a href="xiaoxi_contacts_fri_pho.html"><img src="../image/xiaoxi/iphone_fr.png"></a>
+            手机好友
+        </div>
+          <ul>
+        	<div class="rec">推荐好友</div>
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                                <div class="news">添加</div>
+                    </li>   
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                                <div class="news">添加</div>
+                    </li>   
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                                <div class="news">添加</div>
+                    </li>   
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                                <div class="news">添加</div>
+                    </li>   
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                                <div class="news">添加</div>
+                    </li>   
+    	<!---->
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">北葵向暖</div>
+                                <div class="wait">待验证</div>
+                    </li>   
+        <!---->             
+					<li>
+                                <div class="head">
+                                    <img src="../image/remen/touxiang.jpg">
+                                </div>
+                                <div class="name">阿华</div>
+                                <div class="alr">已验证</div>
+                    </li>   
+         <!---->   
+          </ul>  
+	</div>
+    <div class="main_contacts_fri_overlay">
+        <div class="wrap">
+            <div class="title">验证信息</div>
+            <textarea placeholder="我是阿华，交个朋友吧~" onKeyUp="checkLen(this)"></textarea>
+            <ul>
+                <li class="cancel">取消</li>
+                <li class="enter">确定</li>
+            </ul>
+    	</div>
+    </div>
+</body>
+</html>
+    <script type="text/javascript">
+	/*搜索框清除*/
+		$('.main_contacts_search .cancel').click(function(e) {
+            $('.main_contacts_search input').val('')
+        });
+        function checkLen(obj) {  
+        
+        var maxChars = 50;//最多字符数  
+        
+        if (obj.value.length > maxChars)  obj.value = obj.value.substring(0,maxChars);  
+        
+        var curr = maxChars - obj.value.length;  
+        
+        } 
+		
+		$('.main_contacts_fri li .news').click(function(e) {
+            $('.main_contacts_fri_overlay').show(0)
+        });
+		$('.main_contacts_fri_overlay .wrap ul li:eq(0)').click(function(e) {
+            $('.main_contacts_fri_overlay').hide(0)
+        });
+	</script>
+
+
+
+
+
+
+

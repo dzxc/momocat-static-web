@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<link href="../style/xiaoxi_style.css" rel="stylesheet"v type="text/css"/>
+<link href="../style/user_style.css" rel="stylesheet"v type="text/css"/>
+<title>冰狗</title>
+</head>
+
+<body bgcolor="#FFF">
+     <!--头部-->
+		<div class="new-header"> 
+			<a href="javascript:pageBack();" class="new-a-back" id="backUrl">
+				<img src="../image/user/left_icon.png"/>
+			</a>
+              <h2>分享有礼</h2>
+            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd">
+        	   <img src="../image/user/j_icon.png"/>
+            </a>  
+        </div>
+    <!--头部结束-->  
+    <!--用户头像开始--> 
+    <div class="usr_top_a">
+     	<div class="user_log_a">
+     	    <div class="user_img_a"><img src="../image/user/user_logo.jpg"/></div>
+     	</div>
+    </div> 
+    <!--用户头像结束-->
+   <!--二维码开始--> 
+    <div class="code">
+       <p>点击以下二维码或右上角分享按钮，将冰狗推荐给朋友即可获得10狗粮。</p>
+       <div class="qr">
+          <img src="../image/user/ewm.png"/>
+       </div>
+   <!--二维码end--> 
+   <!--分享成功-->
+   <div class="success">
+     <div class="wz_p">
+          <p>分享成功</p>
+          <img src="../image/user/q.png"/>
+          <p style="color:#ff5a5c">+10的狗粮</p>
+      </div>
+    </div> 
+   </div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+   $(function(){
+	  $(".new-a-jd").click(function(){
+		  $(".success").show();
+	});
+	$(".success").click(function(){
+		  $(".success").hide();
+	});
+});
+</script>
+</html>

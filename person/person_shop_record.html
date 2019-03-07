@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#313131">
+	<header style="background:#313131">
+    		<a href="person_shop_add.html"><div class="_left" ><img src="../image/login/Arrow-Left-icon.png"></div></a>
+            <div class="_right"><img src="../image/person/camera.png"></div>
+            <div class="_righttwo"><img src="../image/person/flashlight.png"></div>
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="person_shop_record">
+    	<div class="video">
+        	<img src="../image/person/03.jpg">
+        </div>
+    	<div class="bar">
+        	<div class="in"></div>
+        </div>
+        <div class="tip">
+        	3min  
+        </div>
+        <div class="btn">
+        	<ul>
+            	<li><img src="../image/person/erro.png"></li>
+            	<li><img src="../image/person/btn.png"></li>
+            	<li><a href="person_shop_add.html"><img src="../image/person/right.png"></a></li>
+            </ul>
+        </div>
+	</div>
+    
+    
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+		var Ing=0;
+		var num=0;
+		$('.person_shop_record .btn ul li:nth-child(2) img').bind('click', function() {
+			if(Ing==0){
+				function record(){
+					num++;
+					if(num<101){
+					$('.person_shop_record .bar .in').css('width',''+num+'%')
+					$('.person_shop_record .btn ul li:nth-child(2) img').attr('src','../image/person/icon_9.png')
+					}
+					else{
+					$('.person_shop_record .bar .in').css('width','100%')
+					$('.person_shop_record .btn ul li:nth-child(2) img').attr('src','../image/person/btn.png')
+					$('.person_shop_record .btn li img').css('display','block')
+					clearInterval(mytime)
+					}
+				}
+					mytime=setInterval(record,30)
+					Ing=1;
+			}
+			else{
+				$(this).attr('src','../image/person/btn.png')
+				Ing=0;
+				clearInterval(mytime)
+				$('.person_shop_record .btn li img').css('display','block')
+			}
+        });
+		$('.person_shop_record .btn ul li:nth-child(1) img').click(function(e) {
+			num=0;
+			$('.person_shop_record .bar .in').css('width',''+num+'%');
+			$(this).hide(0);
+			$('.person_shop_record .btn ul li:nth-child(3) img').hide(0)
+			Ing=0;
+        });
+    </script>
+
+
+
+
+
+

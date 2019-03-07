@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<div class="person_wmcd_search">
+    	<input id="person_wmcd_input" placeholder="请输入您想要的商品">
+        <img src="../image/tansuo/Elipse-3.png">
+        <div class="person_wmcd_search_cancel">取消</div>
+    </div>
+	<div class="person_wmcd_searchwrap">
+        <header>
+                <div class="_left"><a href="person.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                我卖出的
+                <div class="_right" id="person_wmcd_search"><img src="../image/person/iconfont-chaxun.png"></div>
+        </header>
+        <div class="person_wmcd_state">
+        	<ul>
+            	<a href="person_wmcd_wpay.html"><li><img src="../image/person/1_main_icon_dfk.png">待付款</li></a>
+            	<a href="person_wmcd_wdel.html"><li><img src="../image/person/2_main_icon_dfh.png">待发货</li></a>
+            	<a href="person_wmcd_wgoo.html"><li><img src="../image/person/3_main_icon_dsh.png">待收货</li></a>
+            	<li><img src="../image/person/4_main_icon_sh.png">售后/换货<div class="center"></div></li>
+            	<a href="person_wmcd_wcom.html"><li><img src="../image/person/5_main_icon_ywc.png">已完成</li></a>
+                
+            </ul>
+        </div>
+        
+     <!-------------售后---------------->   
+        <ul class="person_wmcd_wser">
+        	<li class="main_li">
+            	<div class="info">
+                    <div class="pic">
+                        <img src="../image/person/book.jpg">
+                    </div>
+                    <div class="wrap">
+                        <div class="name">
+                            品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                        </div>
+                        <div class="material">
+                            天蓝色  钢化玻璃
+                        </div>
+                        <div class="price">
+                            ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                        </div>
+                        <div class="state">
+                            退货中
+                        </div>
+                    </div><!--信息-->
+                </div>
+                <div class="sel">
+                	<div class="add">合计:</div>
+                	<div class="pri">¥28.00</div>
+                    <div class="exit">同意退货</div>
+                    <div class="log">查看物流</div>
+                </div>
+            </li>
+        	<li class="main_li">
+            	<div class="info">
+                    <div class="pic">
+                        <img src="../image/person/book.jpg">
+                    </div>
+                    <div class="wrap">
+                        <div class="name">
+                            品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                        </div>
+                        <div class="material">
+                            天蓝色  钢化玻璃
+                        </div>
+                        <div class="price">
+                            ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                        </div>
+                        <div class="state">
+                            换货中
+                        </div>
+                        
+                    </div><!--信息-->
+                </div>
+                <div class="sel">
+                	<div class="add">合计:</div>
+                	<div class="pri">¥28.00</div>
+                    <div class="exc">同意换货</div>
+                    <div class="log">查看物流</div>
+                </div>
+            </li>
+        	<li class="main_li">
+            	<div class="info">
+                    <div class="pic">
+                        <img src="../image/person/book.jpg">
+                    </div>
+                    <div class="wrap">
+                        <div class="name">
+                            品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                        </div>
+                        <div class="material">
+                            天蓝色  钢化玻璃
+                        </div>
+                        <div class="price">
+                            ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                        </div>
+                        <div class="state">
+                            退款中
+                        </div>
+                    </div><!--信息-->
+                </div>
+                <div class="sel">
+                	<div class="add">合计:</div>
+                	<div class="pri">¥28.00</div>
+                    <div class="end">退款</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="person_wmcd_wser_overlay">
+    	<div class="record">
+            <div class="title">退款</div>
+            <input>
+			<div class="max">最多退款：<span>￥28.00</span></div>
+			<div class="enter">确认退款</div>
+         </div>
+    </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+	$('.person_wmcd_wser .main_li .sel .sen').click(function(e) {
+        window.location.href='person_wmcd_detail_order.html'
+    });
+	$('.person_wmcd_wser .main_li .sel .log').click(function(e) {
+        window.location.href='person_wmcd_detail_logi.html'
+    });
+	$('.person_wmcd_wser .main_li .sel .end').click(function(e) {
+        $('.person_wmcd_wser_overlay').show(0)
+    });
+	$('.person_wmcd_wser_overlay .record .enter').click(function(e) {
+        $('.person_wmcd_wser_overlay').hide(0)
+    });
+    </script>
+
+
+

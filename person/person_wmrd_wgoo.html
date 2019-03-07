@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<div class="person_wmrd_search">
+    	<input id="person_wmrd_input" placeholder="请输入您想要的商品">
+        <img src="../image/tansuo/Elipse-3.png">
+        <div class="person_wmrd_search_cancel">取消</div>
+    </div>
+	<div class="person_wmrd_searchwrap">
+        <header>
+                <div class="_left"><a href="person.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                我买入的
+                <div class="_right" id="person_wmrd_search"><img src="../image/person/iconfont-chaxun.png"></div>
+        </header>
+        <div class="person_wmrd_state">
+        	<ul>
+            	<a href="person_wmrd_wpay.html"><li><img src="../image/person/1_main_icon_dfk.png">待付款</li></a>
+            	<a href="person_wmrd_wdel.html"><li><img src="../image/person/2_main_icon_dfh.png">待发货</li></a>
+            	<li><img src="../image/person/3_main_icon_dsh.png">待收货<div class="center"></div></li>
+            	<a href="person_wmrd_wser.html"><li><img src="../image/person/4_main_icon_sh.png">售后/换货</li></a>
+            	<a href="person_wmrd_wcom.html"><li><img src="../image/person/5_main_icon_ywc.png">已完成</li></a>
+                
+            </ul>
+        </div>
+     <!-------------待收货---------------->   
+        <ul class="person_wmrd_wgoo">
+        	<li class="main_li">
+            	<div class="info">
+                    <div class="pic">
+                        <img src="../image/person/book.jpg">
+                    </div>
+                    <div class="wrap">
+                        <div class="name">
+                            品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                        </div>
+                        <div class="material">
+                            天蓝色  钢化玻璃
+                        </div>
+                        <div class="price">
+                            ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                        </div>
+                        <div class="state">
+                            已发货
+                        </div>
+                    </div><!--信息-->
+                </div>
+                <div class="sel">
+                	<div class="add">合计:</div>
+                	<div class="pri">¥28.00</div>
+                    <div class="ent">确认收货</div>
+                    <div class="exc">退/换货</div>
+                    <div class="log">查看物流</div>
+                </div>
+            </li>
+        	<li class="main_li">
+            	<div class="info">
+                    <div class="pic">
+                        <img src="../image/person/book.jpg">
+                    </div>
+                    <div class="wrap">
+                        <div class="name">
+                            品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                        </div>
+                        <div class="material">
+                            天蓝色  钢化玻璃
+                        </div>
+                        <div class="price">
+                            ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                        </div>
+                        <div class="state">
+                            已发货
+                        </div>
+                    </div><!--信息-->
+                </div>
+                <div class="sel">
+                	<div class="add">合计:</div>
+                	<div class="pri">¥28.00</div>
+                    <div class="ent">确认收货</div>
+                    <div class="exc">退/换货</div>
+                    <div class="log">查看物流</div>
+                </div>
+            </li>
+        	<li class="main_li">
+            	<div class="info">
+                    <div class="pic">
+                        <img src="../image/person/book.jpg">
+                    </div>
+                    <div class="wrap">
+                        <div class="name">
+                            品奥电子称体重秤家用称重电子秤人体秤精准健康...
+                        </div>
+                        <div class="material">
+                            天蓝色  钢化玻璃
+                        </div>
+                        <div class="price">
+                            ¥28.00<img src="../image/person/iconfont-chenhao.png" ><span class="num">1</span>
+                        </div>
+                        <div class="state">
+                            已发货
+                        </div>
+                    </div><!--信息-->
+                </div>
+                <div class="sel">
+                	<div class="add">合计:</div>
+                	<div class="pri">¥28.00</div>
+                    <div class="ent">确认收货</div>
+                    <div class="exc">退/换货</div>
+                    <div class="log">查看物流</div>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="person_wmrd_wpay_overlay">
+         <div class="pay">
+            <div class="title">请输入支付密码</div>
+            <div class="ipt">
+		           <input type="password" name="sn1" maxlength="1" id="sn1"/>
+		           <input type="password" name="sn2" maxlength="1" id="sn2"/>
+		           <input type="password" name="sn3" maxlength="1" id="sn3"/>
+		           <input type="password" name="sn4" maxlength="1" id="sn4"/>
+		           <input type="password" name="sn5" maxlength="1" id="sn5"/>
+		           <input type="password" name="sn6" maxlength="1" id="sn6"/>
+            </div>
+            <ul>
+                <li>取消</li>
+                <li>确定</li>
+            </ul>
+         </div>
+    </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+	$('.person_wmrd_wgoo .main_li .sel .ent').click(function(e) {
+        $('.person_wmrd_wpay_overlay').show(0).children('.pay').show(0)
+		$(".person_wmrd_wpay_overlay .pay .ipt input:eq(0)").focus()
+    });
+	$('.person_wmrd_wgoo .main_li .sel .exc').click(function(e) {
+        window.location.href='person_wmrd_detail_wcom.html'
+    });
+	$('.person_wmrd_wgoo .main_li .sel .log').click(function(e) {
+        window.location.href='person_wmrd_detail_logi.html'
+    });
+	$('.person_wmrd_wgoo .main_li .info').click(function(e) {
+        window.location.href='person_wmrd_detail_wgoo.html'
+    });
+	
+	$('.person_wmrd_wpay_overlay .pay ul li:eq(0)').click(function(e) {
+        $('.person_wmrd_wpay_overlay').hide(0).children('.pay').hide(0)
+    });
+	$('.person_wmrd_wpay_overlay .pay ul li:eq(1)').click(function(e) {
+		window.location.href=window.location.href
+    });
+    //输入密码
+    function device_verify() {
+        var sn = $("#sn1").val() + $("#sn2").val() + $("#sn3").val() + $("#sn4").val() + $("#sn5").val() + $("#sn6").val();
+        $(".loading_series").show(); //loading图标
+        $("#device_msg").hide(); //错误密码提示
+		
+        $.ajax({
+            cache: false,
+            type: "GET",
+            url: purl,
+            data: pparm,
+            dataType: "jsonp",
+            jsonp: "callback",
+
+            success: function(obj) {
+				
+				
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $("#sn1").focus();
+
+        //自动跳到下一个输入框  
+        $(".person_wmrd_wpay_overlay .pay .ipt input").each(function() {
+            $(this).keyup(function(e) {
+                e = window.event || e;
+                var k = e.keyCode || e.which;
+                if (k == 8) {   //8是空格键
+                    if ($(this).val().length < 1) {
+                        $(this).prev().focus();
+                        $(this).prev().focus(function() {
+                            var obj = e.srcElement ? e.srcElement: e.target;
+                            if (obj.createTextRange) { //IE浏览器
+                                var range = obj.createTextRange();
+                                range.moveStart("character", 1);
+                                range.collapse(true);
+                                range.select();
+                            }
+                        });
+                    }
+                } else {
+                    if ($(this).val().length > 0) {
+                        $(this).next().focus();
+                    }
+                }
+            })
+        });
+
+        $("input[type='text'][id^='sn']").bind('keyup',
+        function() {
+            var len = $("#sn1").val().length + $("#sn2").val().length + $("#sn3").val().length + $("#sn4").val().length + $("#sn5").val().length + $("#sn6").val().length;
+            if (len == 6) device_verify();
+        });
+
+    });
+    </script>
+
+
+

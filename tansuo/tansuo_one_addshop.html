@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/tansuo_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+        <header>
+                <div class="_left"><a href="tansuo_one.html"><img src="../image/remen/Arrow-Left-icon.png" ></a></div>
+                购物车
+        </header>
+        <ul class="main_one_addshop">
+        	<li class="main_li">
+            	<div class="selection current"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥28.00
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>1</h1>
+            		<div class="num_r">+</div>
+                </div>
+                
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥28.00
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>1</h1>
+            		<div class="num_r">+</div>
+                </div>
+                
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥28.00
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>1</h1>
+            		<div class="num_r">+</div>
+                </div>
+                
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥28.00
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>1</h1>
+            		<div class="num_r">+</div>
+                </div>
+                
+            </li>
+         <!---------->   
+        	<li class="main_li">
+            	<div class="selection"></div>
+                <div class="pic"><img src="../image/tansuo/book.jpg"></div>
+                <div class="wrap">
+            		<div class="name">品奥电子称体重秤家用称重电子秤人体秤精准健康...</div>
+                	<div class="material">天蓝色  钢化玻璃</div>
+                	<div class="price">¥28.00
+                    	<span>开奖进度：<span class="per">91%</span></span>
+                    </div>
+                	
+                </div>
+            	<div class="num_m">
+                    <div class="num_l">-</div> 
+                    <h1>1</h1>
+            		<div class="num_r">+</div>
+                </div>
+                
+            </li>
+        </ul>
+        <div class="main_one_addshop_foot">
+        	<div class="all_select"></div>全选
+        	<a href="tansuo_one_addshop_sub.html"><div class="btn">去结算(2)</div></a>
+        	<div class="add">合计:<span>￥862.00</span></div>
+        </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+		var sum;
+		function add(num){
+		$('.main_one_addshop li:nth-child('+num+') .num_l').click(function(e) {
+			if( sum<1){
+				sum==0
+			}
+			else{
+				sum=parseInt($('.main_one_addshop li:nth-child('+num+') .num_m h1').text())-1;
+				$('.main_one_addshop li:nth-child('+num+') .num_m h1').text(sum)
+			}
+        });				
+		$('.main_one_addshop li:nth-child('+num+') .num_r').click(function(e) {
+				sum=parseInt($('.main_one_addshop li:nth-child('+num+') .num_m h1').text())+1;
+				$('.main_one_addshop li:nth-child('+num+') .num_m h1').text(sum)
+        });
+		}
+		for(i=1;i<99;i++){
+			add(i)
+			}
+			
+		var num =0;
+		$('.main_one_addshop .main_li .selection').click(function(e) {
+			if(num==0){
+				$(this).addClass('current')
+				num=1;
+			}
+			else{
+				$(this).removeClass('current')
+				num=0;
+			}
+        });
+			
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

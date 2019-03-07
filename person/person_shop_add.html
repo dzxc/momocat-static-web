@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="person_shop_apply.html"><div class="_left"><img src="../image/login/Arrow-Left-icon.png"></div></a>
+    		添加商品
+            <a href="person_shop.html"><div class="_right"><span>完成</span></div></a>
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="person_shop_add">
+    	<div class="add">
+        	<div class="video">添加视频</div>
+            <div class="img">添加图片</div>
+        </div>
+    	<ul>
+            <li>
+                <span>商品名称</span><input placeholder="请输入商品名称，最长20个汉字">
+            </li>
+            <li>
+                <span>价格</span><input placeholder="请输入商品价格">
+            </li>
+            <li>
+                <span>库存</span><input placeholder="请输入0~9999的数字" >
+            </li>
+            <li>
+                <span>规格</span><input placeholder="如尺寸颜色重量等" >
+            </li>
+        </ul>
+    	<div class="board">
+        	<h1>商品描述</h1>
+            <textarea placeholder="如尺寸颜色重量等" rows="5"></textarea>
+        </div>
+	</div>
+	<div class="person_shop_add_foot">
+    	<div class="f-overlay"></div>
+    	<ul class="addimg">
+            	<li>拍摄照片</li>
+            	<li>导入照片</li>
+            	<li class="cal">取消</li>
+        </ul>	
+		<ul class="addvideo">
+            	<a href="person_shop_record.html"><li>录制视频</li></a>
+            	<li>导入视频</li>
+            	<li class="cal">取消</li>
+        </ul>	
+	</div>
+    
+    
+</body>
+</html>
+    <script src="../js/script.js"></script>
+	<script type="text/javascript">
+    	$('.person_shop_add .add .video').click(function(e) {
+            $('.person_shop_add_foot .f-overlay,.person_shop_add_foot .addvideo').show(0)
+        });
+		
+    	$('.person_shop_add_foot .addvideo .cal').click(function(e) {
+            $('.person_shop_add_foot .f-overlay,.person_shop_add_foot .addvideo').hide(0)
+        });
+
+
+    	$('.person_shop_add .add .img').click(function(e) {
+            $('.person_shop_add_foot .f-overlay,.person_shop_add_foot .addimg').show(0)
+        });
+    	$('.person_shop_add_foot .addimg .cal').click(function(e) {
+            $('.person_shop_add_foot .f-overlay,.person_shop_add_foot .addimg').hide(0)
+        });
+    </script>
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/xiaoxi_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    		<a href="xiaoxi_news_chat_record.html"><div class="_left"><img src="../image/xiaoxi/Arrow_left_icon.png"></div></a>
+			选择原因
+    </header>
+    <!--  ----------------------------消息----------------------------->
+	<div class="main_xiaoxi_chat_record_rep">
+          <ul class="sel">
+          		<li>色情<div class="switch"><div class="in"></div></div></li>
+          		<li>欺诈骗钱<div class="switch"><div class="in"></div></div></li>
+          		<li>诅咒谩骂<div class="switch"><div class="in"></div></div></li>
+          		<li>广告骚扰<div class="switch"><div class="in"></div></div></li>
+          </ul>
+          <a href="xiaoxi_news_chat_record_suc.html"><div class="sub">
+          		提交
+          </div></a>  
+	</div>
+    
+</body>
+</html>
+    <script type="text/javascript">
+	var Switch=0;
+	$('.main_xiaoxi_chat_record_rep .sel li').click(function(e) {
+		if(Switch==0){
+			$(this).children('.switch').css({'border':'1px solid #5ecbff'}).children('.in').show(0)
+			Switch=1;
+		}
+		else{
+			$(this).children('.switch').css({'border':'1px solid #333'}).children('.in').hide(0)
+			Switch=0;
+		}
+    });
+		
+	</script>
+
+
+
+
+
+
+

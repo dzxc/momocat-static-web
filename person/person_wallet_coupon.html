@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰狗</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- CSS Code -->
+    <link rel="stylesheet" href="../css/person_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/flickerplate.css" type="text/css">
+    <!-- JavaScript Code -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="../js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="../js/flickerplate.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+
+</head>
+<!--
+    类命名规则 布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
+     -->
+<body bgcolor="#ebebeb">
+	<header>
+    	<a href="person_wallet.html"><div class="_left"><img src="../image/person/Arrow_left_icon.png"></div></a>
+    	我的优惠券
+    </header>
+    <div class="person_wallet_coupon">
+		<div class="type">
+        	<ul>
+            	<li class="current">
+                	<h1>未使用(2)</h1>
+                    <div class="center"></div>
+                </li>
+            	<li>
+                	<h1>已使用(0)</h1>
+                    <div class="center"></div>
+                </li>
+            	<li>
+                	<h1>已过期(2)</h1>
+                    <div class="center"></div>
+                </li>
+            </ul>
+        </div>
+        <!--未使用-->
+		<div class="coupon_val">
+			<ul>
+            	<li>
+                	<div class="extra">
+                    	<div class="worth">
+                        	￥<span>50</span>
+                        </div>
+                		<div class="explain">
+                        	满100元使用
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info">
+                    	<div class="name">嗨拼购专用</div>
+                        <div class="time">使用期限：2016.4.1-2016.5.1</div>
+                    </div>
+                </li>
+            	<li>
+                	<div class="extra">
+                    	<div class="worth">
+                        	￥<span>50</span>
+                        </div>
+                		<div class="explain">
+                        	满100元使用
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info">
+                    	<div class="name">嗨拼购专用</div>
+                        <div class="time">使用期限：2016.4.1-2016.5.1</div>
+                    </div>
+                </li>
+            	<li>
+                	<div class="extra">
+                    	<div class="worth">
+                        	￥<span>50</span>
+                        </div>
+                		<div class="explain">
+                        	满100元使用
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info">
+                    	<div class="name">嗨拼购专用</div>
+                        <div class="time">使用期限：2016.4.1-2016.5.1</div>
+                    </div>
+                </li>
+            </ul>        
+        </div>
+        <!--已使用-->
+		<div class="coupon_ed">
+			<ul>
+            </ul>
+            <div class="none">
+            	<img src="../image/person/coupon_none.png">
+                暂无优惠券~
+            </div>        
+        </div>
+        <!--已过期-->
+		<div class="coupon_expired">
+			<ul>
+            	<li>
+                	<div class="extra">
+                    	<div class="worth">
+                        	￥<span>50</span>
+                        </div>
+                		<div class="explain">
+                        	满100元使用
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info">
+                    	<div class="name">嗨拼购专用</div>
+                        <div class="time">使用期限：2016.4.1-2016.5.1</div>
+                    </div>
+                    <div class="tip">已过期</div>
+                </li>
+            	<li>
+                	<div class="extra">
+                    	<div class="worth">
+                        	￥<span>50</span>
+                        </div>
+                		<div class="explain">
+                        	满100元使用
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info">
+                    	<div class="name">嗨拼购专用</div>
+                        <div class="time">使用期限：2016.4.1-2016.5.1</div>
+                    </div>
+                    <div class="tip">已过期</div>
+                </li>
+            	<li>
+                	<div class="extra">
+                    	<div class="worth">
+                        	￥<span>50</span>
+                        </div>
+                		<div class="explain">
+                        	满100元使用
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info">
+                    	<div class="name">嗨拼购专用</div>
+                        <div class="time">使用期限：2016.4.1-2016.5.1</div>
+                    </div>
+                    <div class="tip">已过期</div>
+                </li>
+            </ul>        
+        </div>
+        
+        
+    </div>
+</body>
+</html>
+    <script src="../js/script.js"></script>
+    <script type="text/javascript">
+		var liIndex=0;
+		$('.person_wallet_coupon .type ul li').click(function(e) {
+            $(this).addClass('current').children('.center').show(0)
+			$(this).siblings().removeClass('current').children('.center').hide(0)
+			liIndex=$(this).index()
+			if(liIndex==0){
+				$('.person_wallet_coupon .coupon_val').show(0).siblings('.person_wallet_coupon .coupon_expired,.person_wallet_coupon .coupon_ed').hide(0)
+			}
+			else if(liIndex==2){
+				$('.person_wallet_coupon .coupon_expired').show(0).siblings('.person_wallet_coupon .coupon_val,.person_wallet_coupon .coupon_ed').hide(0)
+			}
+			else{
+				$('.person_wallet_coupon .coupon_ed').show(0).siblings('.person_wallet_coupon .coupon_expired,.person_wallet_coupon .coupon_val').hide(0)
+			}
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
